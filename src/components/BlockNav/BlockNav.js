@@ -1,23 +1,56 @@
 import React from 'react'
 import {
+  Caption,
   Card,
   Layout,
   Nav,
   NavItem,
+  SectionSeparator,
   User  } from 'playbook-ui'
+  import styled from 'styled-components'
+
+
+// .truncate div {
+//   max-width: 49%;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
+
+//do what news stories does if know class name in component override styling by pointing to  element with style
+
 
 const BlockNav = (props) => {
+
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[class="pb_user_kit_left_horizontal_sm"]').forEach((element) => {
+      element.classList.add("truncate")
+    })
+  })
+
   return (
     <div>
         <Layout
           layout="collection_detail"
           padding="lg"
       >
-    <Card>
-      {
-    <Nav variant="subtle"
-        link="#"
-        title="Users"
+
+
+    <Card
+    padding="none">
+    <Caption
+
+              padding="md"
+              size="sm"
+              text="News Stories"
+          />
+          <SectionSeparator />
+{
+    <Nav
+    link="#"
+    marginTop="sm"
+        orientation="vertical"
+
         {...props}
     >
       <NavItem
@@ -26,6 +59,7 @@ const BlockNav = (props) => {
           link="#"
           {...props}
       >
+<span className="truncate">
         <User
             align="left"
             avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
@@ -36,6 +70,8 @@ const BlockNav = (props) => {
             title="Remodeling Consultant"
             {...props}
         />
+  </span>
+
       </NavItem>
       <NavItem link="#">
         <User
