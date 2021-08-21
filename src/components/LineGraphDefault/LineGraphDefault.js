@@ -1,30 +1,35 @@
 import React from 'react'
-import { Card, Layout, LineGraph } from 'playbook-ui'
-import BlockNav from '../BlockNav/BlockNav'
+import { Card, Layout, LineGraph, SectionSeparator } from 'playbook-ui'
+import ListLayoutRight from '../ListLayoutRight/ListLayoutRight'
+import styled from 'styled-components'
+
+
 const data = [{
   name: 'Number of Installations',
   data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
 }]
 
-const LineGraphDefault = (props) => (
+const GraphTitle = styled.p `
+text-align:left;
+padding:10px 20px ;
+color:grey;
+font-weight:bold;
+`;
+
+const LineGraphDefault = (props) =>(
   <div>
-
-
-  {/*<Layout.Header><Card.Header>Key Performance Indicators</Card.Header></Layout.Header>*/}
-  <Card>
-    <Card.Header>Key Performance Indicators</Card.Header>
+  <Card padding="none">
+  <GraphTitle>Key Performance Indicators</GraphTitle>
+    <SectionSeparator />
     <Layout layout="content">
   <Layout.Side>
-<BlockNav></BlockNav>
+<ListLayoutRight></ListLayoutRight>
 </Layout.Side>
 
 <Layout.Body>
-    <LineGraph
-        axisTitle="Number of Employees"
+<LineGraph
         chartData={data}
-        height="50%"
-        id="line-percentage-height"
-        title="Percentage Height (50%)"
+        id="line-fixed-height"
         xAxisCategories={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']}
         yAxisMin={0}
         {...props}
@@ -34,5 +39,6 @@ const LineGraphDefault = (props) => (
     </Card>
   </div>
 )
+
 
 export default LineGraphDefault

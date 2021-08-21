@@ -88,7 +88,13 @@ const clientData = {
 //
 ////////////////////////////////////////////////////
 
-const FulfillmentChart = ({ chartData, title }) => (
+const FulfillmentChart = ({ chartData, title, props }) => (
+  <Layout
+          collapse="xs"
+          position="left"
+          size="lg"
+          {...props}
+      >
   <Card
       borderNone
       margin="sm"
@@ -154,9 +160,11 @@ const FulfillmentChart = ({ chartData, title }) => (
       ))}
 
   </Card>
+  </Layout>
 )
 
 const GridRowFill = ({ data }) => (
+
   <Card.Body padding="none">
     <Flex
         horizontal="center"
@@ -380,6 +388,7 @@ const NumberGrid = ({ data }) => {
         </Layout.Body>
       </Layout>
     </Card>
+
   )
 }
 

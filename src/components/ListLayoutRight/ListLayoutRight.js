@@ -20,14 +20,11 @@ const ListLayoutRight = (props) => {
           layout="right"
           {...props}
       >
-          <Card
-          {...props}
-          highlight={{ position: 'side', color: 'category_2' }}
-      >
-        {'Card content'}
-      </Card>
+
         <ListItem>
+
           <Title
+
               size={4}
               text="Label"
               {...props}

@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Caption,
   Card,
   Layout,
   Nav,
@@ -30,7 +29,7 @@ const BlockNav = (props) => {
 
   return (
     <div>
-
+<Layout layout="collection_detail">
     <Card
     padding="none">
 
@@ -98,7 +97,7 @@ const BlockNav = (props) => {
     </Nav>
 }
     </Card>
-
+    </Layout>
     </div>
   )
 }
