@@ -18,15 +18,10 @@ font-weight:bold;
 
 const LineGraphDefault = (props) =>(
   <div>
-  <Card padding="none">
+
   <GraphTitle>Key Performance Indicators</GraphTitle>
     <SectionSeparator />
-    <Layout layout="content">
-  <Layout.Side>
-<ListLayoutRight></ListLayoutRight>
-</Layout.Side>
 
-<Layout.Body>
 <LineGraph
         chartData={data}
         id="line-fixed-height"
@@ -34,9 +29,6 @@ const LineGraphDefault = (props) =>(
         yAxisMin={0}
         {...props}
     />
-     </Layout.Body>
-    </Layout>
-    </Card>
   </div>
 )
 
