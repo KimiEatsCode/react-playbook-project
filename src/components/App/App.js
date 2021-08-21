@@ -1,11 +1,12 @@
 import './App.css';
 import CardDashboard from '../CardDashboard/CardDashboard';
 import BlockNav from '../BlockNav/BlockNav';
-import ListLayoutRight from '../ListLayoutRight/ListLayoutRight';
+import LineGraphDefault from '../LineGraphDefault/LineGraphDefault';
 
 function App() {
   return (
     <div className="App">
+      <LineGraphDefault/>
       <BlockNav/>
       <CardDashboard/>
 

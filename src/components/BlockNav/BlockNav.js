@@ -30,11 +30,6 @@ const BlockNav = (props) => {
 
   return (
     <div>
-        <Layout
-          layout="collection_detail"
-          padding="lg"
-      >
-
 
     <Card
     padding="none">
@@ -109,7 +104,7 @@ const BlockNav = (props) => {
     </Nav>
 }
     </Card>
-    </Layout>
+
     </div>
   )
 }
