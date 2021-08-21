@@ -1,5 +1,5 @@
 import React from 'react'
-import { LineGraph } from 'playbook-ui'
+import { Card, Layout, LineGraph } from 'playbook-ui'
 import BlockNav from '../BlockNav/BlockNav'
 const data = [{
   name: 'Number of Installations',
@@ -9,7 +9,16 @@ const data = [{
 const LineGraphDefault = (props) => (
   <div>
 
+
+  {/*<Layout.Header><Card.Header>Key Performance Indicators</Card.Header></Layout.Header>*/}
+  <Card>
+    <Card.Header>Key Performance Indicators</Card.Header>
+    <Layout layout="content">
+  <Layout.Side>
 <BlockNav></BlockNav>
+</Layout.Side>
+
+<Layout.Body>
     <LineGraph
         axisTitle="Number of Employees"
         chartData={data}
@@ -20,6 +29,9 @@ const LineGraphDefault = (props) => (
         yAxisMin={0}
         {...props}
     />
+     </Layout.Body>
+    </Layout>
+    </Card>
   </div>
 )
 

@@ -33,13 +33,7 @@ const BlockNav = (props) => {
 
     <Card
     padding="none">
-    <Caption
 
-              padding="md"
-              size="sm"
-              text="News Stories"
-          />
-          <SectionSeparator />
 {
     <Nav
     link="#"
