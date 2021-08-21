@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Layout, LineGraph, SectionSeparator } from 'playbook-ui'
+import { Card, Layout, LineGraph, SectionSeparator, Title } from 'playbook-ui'
 import ListLayoutRight from '../ListLayoutRight/ListLayoutRight'
 import styled from 'styled-components'
 
@@ -19,7 +19,14 @@ font-weight:bold;
 const LineGraphDefault = (props) =>(
   <div>
   <Card padding="none">
-  <GraphTitle>Key Performance Indicators</GraphTitle>
+  <GraphTitle>
+    {/* <Title
+          size={4}
+          text="Row"
+          {...props}
+      />Key Performance Indicators</Title> */}
+Key Performance Indicators
+      </GraphTitle>
     <SectionSeparator />
     <Layout layout="content">
   <Layout.Side>
