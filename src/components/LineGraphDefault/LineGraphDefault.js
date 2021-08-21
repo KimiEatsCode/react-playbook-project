@@ -19,8 +19,6 @@ font-weight:bold;
 const LineGraphDefault = (props) =>(
   <div>
 
-  <GraphTitle>Key Performance Indicators</GraphTitle>
-    <SectionSeparator />
 
 <LineGraph
         chartData={data}
