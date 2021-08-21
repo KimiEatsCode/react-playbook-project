@@ -26,12 +26,14 @@ const BlockNav = (props) => {
       element.classList.add("truncate")
     })
   })
-
+  // if(props.useLayout ="true") {
+  //   return  <Layout layout="collection_detail">
+  //  }
   return (
     <div>
-<Layout layout="collection_detail">
-    <Card
-    padding="none">
+
+   {/* <Card
+    padding="none"> */}
 
 {
     <Nav
@@ -96,8 +98,8 @@ const BlockNav = (props) => {
       </NavItem>
     </Nav>
 }
-    </Card>
-    </Layout>
+    {/* </Card> */}
+    {/* </Layout> */}
     </div>
   )
 }
