@@ -20,7 +20,7 @@ const LineGraphDefault = (props) =>(
   <div>
 
 
-{/* <Flex
+ <Flex
 
 flex={4}
 >
@@ -38,8 +38,9 @@ flex={4}
     </Card>
 
     </FlexItem>
-    </Flex> */}
-    <Layout>
+    </Flex>
+
+    {/* <Layout>
 
     <LineGraph
 
@@ -50,7 +51,7 @@ yAxisMin={0}
 {...props}
 />
 
-    </Layout>
+    </Layout> */}
   </div>
 )
 

@@ -136,8 +136,8 @@ const CardDashboard = () => {
   return (
     <>
       <div>
-        <Flex orientation="row" spacing="between">
-          <FlexItem >
+        <Flex orientation="row" wrap spacing="between">
+          <FlexItem fixedSize="50%">
             <FulfillmentChart {...pipelineData} />
           </FlexItem>
           <FlexItem  >
