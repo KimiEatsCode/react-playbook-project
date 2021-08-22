@@ -16,10 +16,6 @@ const KpiChart = (props) => (
 
   <div>
     <Card padding="none">
-      {/* <Card.Header padding="xs" style={{BackgroundColor:"#fff"}}>
-        <GraphTitle>Key Performance Indicators</GraphTitle>
-
-    </Card.Header> */}
      <Card.Body padding="none">
      <GraphTitle>Key Performance Indicators</GraphTitle>
       </Card.Body>
