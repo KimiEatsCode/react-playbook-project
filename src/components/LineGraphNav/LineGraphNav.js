@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import {
     Flex,
@@ -12,13 +12,22 @@ import {
   Title,
 } from 'playbook-ui';
 
-const DefaultNav = props => (
+export class DefaultNav extends Component {
+constructor(props) {
+    super(props);
+    this.state = {
+        name:"Sarah"
+    }
+}
+
+render(props) {
+    return (
     <Flex>
   <Nav orientation="vertical">
     <NavItem active>
       <List layout="right">
         <ListItem {...props}>
-          <Title  size={4} text="Revenue" />
+          <Title  size={4} text={this.state.name} />
           <StatChange change="decrease" value="2" />
         </ListItem>
       </List>
@@ -66,5 +75,7 @@ const DefaultNav = props => (
   </Nav>
   </Flex>
 );
+    }
+}
 
 export default DefaultNav;
