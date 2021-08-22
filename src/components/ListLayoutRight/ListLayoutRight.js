@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {
   Flex,
   FlexItem,
@@ -9,18 +9,18 @@ import {
   Title,
 } from 'playbook-ui'
 
-// import List from '../_list'
-// import ListItem from '../_list_item'
 
-// import Currency from '../../pb_currency/_currency'
-// import Title from '../../pb_title/_title'
-
-const ListLayoutRight = (props) => {
-  return (
+class ListLayoutRight extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "Sarah",
+    }
+  }
+  render (props) {
+  return  (
     <>
 <Flex>
-
-
       <List
 
           layout="right"
@@ -29,7 +29,7 @@ const ListLayoutRight = (props) => {
         <ListItem>
           <Title
               size={4}
-              text="Revenue"
+              text={this.state.name}
               {...props}
           />
         <StatChange
@@ -104,6 +104,7 @@ const ListLayoutRight = (props) => {
       </Flex>
     </>
   )
+}
 }
 
 export default ListLayoutRight
