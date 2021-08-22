@@ -20,9 +20,16 @@ constructor(props) {
     }
 }
 
+nameChange = () => {
+    this.setState({name:"test"})
+}
+
 render(props) {
     return (
     <Flex>
+         <div className="App">
+      <button onClick={this.nameChange}>Change Name</button>
+    </div>
   <Nav orientation="vertical">
     <NavItem active>
       <List layout="right">
