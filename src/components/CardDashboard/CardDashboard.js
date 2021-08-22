@@ -194,7 +194,7 @@ const CardDashboard = () => {
   return (
     <>
       <div id="main-dashboard-content">
-        <Flex orientation="row" wrap>
+        <Flex orientation="row" wrap inline>
           <FlexItem fixedSize="50%">
             <FulfillmentChart {...pipelineData} />
           </FlexItem>

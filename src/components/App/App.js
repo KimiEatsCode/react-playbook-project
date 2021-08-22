@@ -1,4 +1,3 @@
-import './App.css';
 import CardDashboard from '../CardDashboard/CardDashboard';
 import BlockNav from '../BlockNav/BlockNav';
 import LineGraphDefault from '../LineGraphDefault/LineGraphDefault';
