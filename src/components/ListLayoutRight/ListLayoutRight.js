@@ -1,9 +1,11 @@
 import React from 'react'
 import {
-  Card,
+  Flex,
+  FlexItem,
+  Icon,
   List,
   ListItem,
-  Currency,
+  StatChange,
   Title,
 } from 'playbook-ui'
 
@@ -16,81 +18,90 @@ import {
 const ListLayoutRight = (props) => {
   return (
     <>
+<Flex>
+
+
       <List
+
           layout="right"
           {...props}
       >
-
         <ListItem>
-
           <Title
-
               size={4}
-              text="Label"
+              text="Revenue"
               {...props}
           />
-          <Currency
-              amount="2,000.50"
-              label="Caption"
-              size="sm"
-              {...props}
-          />
+        <StatChange
+          change="increase"
+          value="26"
+          {...props}
+      />
         </ListItem>
 
         <ListItem>
           <Title
               size={4}
-              text="Label"
+              text="Orders"
               {...props}
           />
-          <Currency
-              amount="2,000.50"
-              label="Caption"
-              size="sm"
-              {...props}
-          />
+          <StatChange
+          change="decrease"
+          value="2"
+          {...props}
+      />
         </ListItem>
 
         <ListItem>
           <Title
               size={4}
-              text="Label"
+              text="Profit"
               {...props}
           />
-          <Currency
-              amount="2,000.50"
-              label="Caption"
-              size="sm"
-              {...props}
-          />
+         <StatChange
+          change=""
+          value=""
+          {...props}
+      />
         </ListItem>
 
         <ListItem>
           <Title
               size={4}
-              text="Label"
+              text="Average Check"
               {...props}
           />
-          <Currency
-              amount="2,000.50"
-              label="Caption"
-              size="sm"
-              {...props}
-          />
+          <StatChange
+          change="increase"
+          value="5"
+          {...props}
+      />
         </ListItem>
 
         <ListItem>
           <Title
               size={4}
-              text="Label"
+              text="Canceled"
           />
-          <Currency
-              amount="2,000.50"
-              label="Caption"
-              size="sm"
+          <StatChange
+          change="decrease"
+          value="18"
+          {...props}
+      />
+        </ListItem>
+        <ListItem>
+          <Title
+              size={4}
+              text="Repeat Sales"
           />
+          <StatChange
+          change=" "
+          value=""
+          {...props}
+      />
         </ListItem>
       </List>
+      </Flex>
     </>
   )
 }

@@ -1,31 +1,50 @@
 import React from 'react'
 
-import { Nav, NavItem } from 'playbook-ui'
+import {  Icon, Nav, NavItem } from 'playbook-ui'
 
 const DefaultNav = (props) => (
   <Nav
       orientation="vertical"
+      justify="left"
       {...props}
   >
     <NavItem
-        link="#"
-        text="Photos"
-        {...props}
-    />
-    <NavItem
-        link="#"
-        text="Music"
-        {...props}
-    />
-    <NavItem
         active
+        iconRight="angle-right"
+        align="start"
         link="#"
-        text="Video"
+        text="Revenue"
+        label="Caption"
+        {...props}
+    />
+     
+    <NavItem
+        link="#"
+        text="Orders"
         {...props}
     />
     <NavItem
+        iconRight="angle-right"
         link="#"
-        text="Files"
+        text="Profit"
+        {...props}
+    />
+    <NavItem
+        iconRight="angle-right"
+        link="#"
+        text="Average Check"
+        {...props}
+    />
+     <NavItem
+        iconRight="angle-right"
+        link="#"
+        text="Canceled"
+        {...props}
+    />
+     <NavItem
+        iconRight="angle-right"
+        link="#"
+        text="Repeat Sales"
         {...props}
     />
   </Nav>
