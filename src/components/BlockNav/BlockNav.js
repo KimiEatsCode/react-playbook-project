@@ -5,6 +5,7 @@ import {
   Nav,
   NavItem,
   SectionSeparator,
+  Title,
   User  } from 'playbook-ui'
   import styled from 'styled-components'
 
@@ -26,14 +27,24 @@ const BlockNav = (props) => {
       element.classList.add("truncate")
     })
   })
-  // if(props.useLayout ="true") {
-  //   return  <Layout layout="collection_detail">
-  //  }
+
+//   const GraphTitle = styled.p `
+// color:#242b42;
+// font-weight:bold;
+// padding:10px 20px;
+// text-align:left;
+// `;
+
   return (
     <div>
-
-   {/* <Card
-    padding="none"> */}
+<Layout layout="collection_detail">
+   <Card
+    padding="none">
+         <Card.Body padding="md">
+     {/* <GraphTitle>Key Performance Indicators</GraphTitle> */}
+    { <Title size={4}>New</Title>}
+      </Card.Body>
+      <SectionSeparator variant="card"></SectionSeparator>
 
 {
     <Nav
@@ -98,8 +109,8 @@ const BlockNav = (props) => {
       </NavItem>
     </Nav>
 }
-    {/* </Card> */}
-    {/* </Layout> */}
+    </Card>
+    </Layout>
     </div>
   )
 }
