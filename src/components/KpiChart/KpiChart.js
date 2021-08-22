@@ -21,13 +21,8 @@ const KpiChart = (props) => (
       </Card.Body>
       <SectionSeparator variant="card"></SectionSeparator>
      <Flex
-
        orientation="row"
-        wrap
-
-    >
-
-      {/* <FlexItem><ListLayoutRight useLayout="false"></ListLayoutRight></FlexItem> */}
+        wrap>
       <FlexItem><DefaultNav padding="none"></DefaultNav></FlexItem>
 
       <FlexItem>

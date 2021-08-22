@@ -1,9 +1,14 @@
 import React from 'react'
 import {
+  Badge,
+  Body,
   Card,
+  Flex,
+  FlexItem,
   Layout,
   Nav,
   NavItem,
+  Pill,
   SectionSeparator,
   Title,
   User  } from 'playbook-ui'
@@ -23,7 +28,21 @@ const BlockNav = (props) => {
    <Card
     padding="none">
          <Card.Body padding="md">
-    { <Title size={4}>New</Title>}
+    {  }
+    <Flex spacing="between">
+    <FlexItem>
+    <Title  size={4}>New</Title>
+                      </FlexItem>
+                      <FlexItem marginLeft="xs">
+                        <Pill
+                            text="25"
+                            variant="info"
+                        />
+                      </FlexItem>
+                    </Flex>
+
+
+
       </Card.Body>
       <SectionSeparator variant="card"></SectionSeparator>
 
@@ -52,7 +71,7 @@ const BlockNav = (props) => {
 
 
       </NavItem>
-      <NavItem link="#">
+      <NavItem link="#"  iconRight="angle-right">
         <User
             align="left"
             avatarUrl="https://randomuser.me/api/portraits/women/45.jpg"

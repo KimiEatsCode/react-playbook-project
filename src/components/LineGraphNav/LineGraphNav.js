@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 import {
-    Flex,
-    FlexItem,
+  Flex,
+  FlexItem,
   Icon,
   List,
   ListItem,
@@ -10,60 +10,59 @@ import {
   NavItem,
   StatChange,
   Title,
-} from 'playbook-ui';
+} from "playbook-ui";
 
-const DefaultNav = props => (
-    <Flex>
-  <Nav orientation="vertical">
-    <NavItem active>
-      <List layout="right">
-        <ListItem {...props}>
-          <Title  size={4} text="Revenue" />
-          <StatChange change="decrease" value="2" />
-        </ListItem>
-      </List>
-    </NavItem>
-    <NavItem>
-      <List layout="right">
-        <ListItem {...props}>
+const DefaultNav = (props) => (
+  <Flex>
+    <Nav orientation="vertical">
+      <NavItem active>
+      <Flex spacing="between">
+            <Title size={4} text="Revenue" />
+            <StatChange change="decrease" value="2" />
+          </Flex>
+      </NavItem>
+      <NavItem>
+        <Flex spacing="between">
           <Title size={4} text="Orders" />
           <StatChange change="decrease" value="2" />
-        </ListItem>
-      </List>
-    </NavItem>
-    <NavItem>
-      <List layout="right">
-        <ListItem {...props}>
-          <Title size={4} text="Profit" />
-          <StatChange change="decrease" value="2" />
-        </ListItem>
-      </List>
-    </NavItem>
-    <NavItem>
-      <List layout="right">
-        <ListItem {...props}>
-          <Title size={4} text="Average Check" />
-          <StatChange change="decrease" value="2" />
-        </ListItem>
-      </List>
-    </NavItem>
-    <NavItem>
-      <List layout="right">
-        <ListItem {...props}>
-          <Title size={4} text="Canceled" />
-          <StatChange change="decrease" value="2" />
-        </ListItem>
-      </List>
-    </NavItem>
-    <NavItem>
-      <List layout="right">
-        <ListItem {...props}>
-          <Title size={4} text="Repeat Sales" />
-          <StatChange change="decrease" value="2" />
-        </ListItem>
-      </List>
-    </NavItem>
-  </Nav>
+        </Flex>
+      </NavItem>
+      <NavItem>
+      <Flex spacing="between">
+            <Title size={4} text="Orders" />
+            <StatChange change="decrease" value="2" />
+          </Flex>
+
+      </NavItem>
+      <NavItem>
+      <Flex spacing="between">
+            <Title size={4} text="Profit" />
+            <StatChange change="decrease" value="2" />
+          </Flex>
+
+      </NavItem>
+      <NavItem>
+      <Flex spacing="between">
+            <Title size={4} text="Average Check" />
+            <StatChange change="decrease" value="2" />
+
+        </Flex>
+      </NavItem>
+      <NavItem>
+      <Flex spacing="between">
+            <Title size={4} text="Canceled" />
+            <StatChange change="decrease" value="2" />
+
+        </Flex>
+      </NavItem>
+      <NavItem>
+      <Flex spacing="between">
+            <Title size={4} text="Repeat Sales" />
+            <StatChange change="decrease" value="2" />
+
+        </Flex>
+      </NavItem>
+    </Nav>
   </Flex>
 );
 
