@@ -21,10 +21,10 @@ const BlockNav = (props) => {
   });
 
   return (
-    <div id="test">
+    <div>
 
         <Card padding="none">
-          <Card.Body padding="md" className="sideBorder">
+          <Card.Body className="sideBorder">
             {}
             <Flex spacing="between">
               <FlexItem>
