@@ -1,16 +1,12 @@
 import React from "react";
 import {
-  BarGraph,
   Body,
   Caption,
   Card,
   CircleIconButton,
-  Currency,
   Flex,
   FlexItem,
-  Gauge,
   IconStatValue,
-  Layout,
   ProgressSimple,
   SectionSeparator,
   Title,
@@ -67,60 +63,6 @@ const ticketData = {
   ],
 };
 
-const totalRevenue = {
-  title: "Total Revenue",
-  data: [
-    {
-      name: "Total Sales",
-      value: 80,
-    },
-  ],
-  legendData: [
-    { value: "1000", label: "Target" },
-    { value: "224", label: "Last Week" },
-    { value: "965", label: "Last Month" },
-  ],
-};
-
-const salesReport = {
-  title: "Total Revenue",
-  legendData: [
-    { value: "1000", label: "Target" },
-    { value: "543", label: "Last Week" },
-  ],
-  data: [
-    {
-      name: "Sales Report",
-      data: [343, 135, 665, 903, 571, 191, 173, 520, 917],
-    },
-  ],
-};
-
-const clientData = {
-  title: "Client Data",
-  data: [
-    { title: "New Clients", value: 35, percent: 11.0, status: "negative" },
-    { title: "Returning Clients", value: 8, percent: 5.0, status: "positive" },
-    { title: "VIP Clients", value: 1, percent: 11.0, status: "negative" },
-    {
-      title: "Orders on Clients",
-      value: 1.44,
-      percent: 5.0,
-      status: "positive",
-    },
-    {
-      title: "Bounce on Clients",
-      value: 30.77,
-      unit: "%",
-      percent: 5.0,
-      status: "positive",
-    },
-    { title: "Days Between Orders", value: 3, percent: 0.0, unit: "days" },
-    { title: "New Orders", value: 26, percent: 11.0, status: "negative" },
-    { title: "Confirmed Orders", value: 15, percent: 11.0, status: "negative" },
-  ],
-};
-
 ////////////////////////////////////////////////////
 //
 // Components
@@ -128,7 +70,7 @@ const clientData = {
 ////////////////////////////////////////////////////
 
 const FulfillmentChart = ({ chartData, title, props }) => (
-  <Card borderNone margin="sm" padding="none" shadow="deeper">
+  <Card borderNone marginTop="lg" padding="none" shadow="deeper">
     <Flex spacing="between" vertical="center">
       <Title padding="sm" size="4" text={title} />
       <CircleIconButton icon="ellipsis-h" variant="link" />
@@ -176,7 +118,7 @@ const GridRowFill = ({ data }) => (
 
 const IconGrid = ({ gridData, props }) => (
   <div>
-    <Card borderNone margin="sm" padding="none" shadow="deeper">
+    <Card borderNone marginTop="lg" padding="none" shadow="deeper">
       <GridRowFill data={gridData.slice(0, 2)} />
       <GridRowFill data={gridData.slice(2)} />
     </Card>
@@ -193,13 +135,12 @@ const IconGrid = ({ gridData, props }) => (
 const CardDashboard = () => {
   return (
     <>
-      <div id="main-dashboard-content">
-        <Flex orientation="row" wrap inline>
+      <div>
+        <Flex orientation="row" wrap spacing="between">
           <FlexItem fixedSize="50%">
             <FulfillmentChart {...pipelineData} />
           </FlexItem>
-          <FlexItem fixedSize="50%">
-            {" "}
+          <FlexItem  >
             <IconGrid {...ticketData} />
           </FlexItem>
         </Flex>
