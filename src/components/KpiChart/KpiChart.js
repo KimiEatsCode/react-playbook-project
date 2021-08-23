@@ -13,7 +13,6 @@ text-align:left;
 `;
 
 const KpiChart = (props) => (
-
   <div>
     <Card padding="none">
      <Card.Body padding="none">
