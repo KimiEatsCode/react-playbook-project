@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Nav, NavItem } from 'playbook-ui'
+import { Flex, FlexItem, Nav, NavItem } from 'playbook-ui'
 
-const HorizontalNav = (props) => {
+const LeftHeaderNav = (props) => {
   return (
     <Nav
         link="#"
@@ -34,4 +34,4 @@ const HorizontalNav = (props) => {
   )
 }
 
-export default HorizontalNav
+export default LeftHeaderNav

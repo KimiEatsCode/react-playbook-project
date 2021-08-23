@@ -1,6 +1,6 @@
 import React from "react";
 import LeftHeaderNav from "../LeftHeaderNav/LeftHeaderNav";
-import RightHeaderNav from "../RightHeadNav/RightHeadNav";
+import RightHeaderNav from "../RightHeaderNav/RightHeaderNav";
 import { Flex, FlexItem } from "playbook-ui";
 
 const Header = () => (
@@ -8,6 +8,7 @@ const Header = () => (
   <Flex orientatin="column">
 
     <Flex orientatin="row">
+ 
     <FlexItem>
       <LeftHeaderNav></LeftHeaderNav>
     </FlexItem>
