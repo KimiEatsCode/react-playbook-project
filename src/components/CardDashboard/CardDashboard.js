@@ -137,16 +137,16 @@ const CardDashboard = () => {
   return (
     <>
       <div>
-        <Layout layout="collection_detail">
-        <Flex orientation="row" wrap spacing="between">
-          <FlexItem fixedSize="50%">
+
+        <Flex orientation="row" wrap spacing="between" >
+          <FlexItem fixedSize="45%">
             <FulfillmentChart {...pipelineData} />
           </FlexItem>
-          <FlexItem  >
+          <FlexItem fixedSize="50%">
             <IconGrid {...ticketData} />
           </FlexItem>
         </Flex>
-        </Layout>
+
       </div>
     </>
   );
