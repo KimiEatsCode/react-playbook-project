@@ -7,13 +7,14 @@ import   Header from "../Header/Header"
 
 function App() {
   return (
-    <div className="App">
+    <div>
        <Flex
         paddingTop="md"
         paddingX="xl"
-        spacing="between"
     >
-      <Header></Header></Flex>
+      <Header></Header>
+
+      </Flex>
       <Background backgroundColor="light" padding="xl">
         <KpiChart />
         <LineGraphDefault />

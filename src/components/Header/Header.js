@@ -1,20 +1,14 @@
 import React from "react";
 import LeftHeaderNav from "../LeftHeaderNav/LeftHeaderNav";
 import RightHeaderNav from "../RightHeadNav/RightHeadNav";
-import { Flex, FlexItem } from "playbook-ui";
+import { Body, Card, Flex, FlexItem, Layout, Pill, Title } from "playbook-ui";
 
 const Header = () => (
   <>
-    <Flex orientatin="row"> <FlexItem>
+    <Flex orientation="column">
       <RightHeaderNav></RightHeaderNav>
-    </FlexItem> </Flex>
- <Flex orientatin="row"></Flex>
-    <FlexItem>
       <LeftHeaderNav></LeftHeaderNav>
-    </FlexItem>
-    <Flex/>
-
-
+    </Flex>
   </>
 );
 
