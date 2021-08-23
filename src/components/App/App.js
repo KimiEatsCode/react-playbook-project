@@ -1,25 +1,20 @@
-import CardDashboard from "../CardDashboard/CardDashboard";
-import BlockNav from "../BlockNav/BlockNav";
-import LineGraphDefault from "../LineGraphDefault/LineGraphDefault";
-import KpiChart from "../KpiChart/KpiChart";
-import { Background, Flex } from "playbook-ui";
-import   Header from "../Header/Header"
+import CardDashboard from '../CardDashboard/CardDashboard';
+import BlockNav from '../BlockNav/BlockNav';
+import LineGraphDefault from '../LineGraphDefault/LineGraphDefault';
+import KpiChart from '../KpiChart/KpiChart';
+import { Background } from 'playbook-ui'
+import TicketCardSection from '../TicketCardSection/TicketCardSection';
 
 function App() {
   return (
-    <div>
-       <Flex
-        paddingTop="md"
-        paddingX="xl"
-    >
-      <Header></Header>
-
-      </Flex>
-      <Background backgroundColor="light" padding="xl">
-        <KpiChart />
-        <LineGraphDefault />
-        <BlockNav />
-        <CardDashboard />
+    <div className="App">
+      <Background  backgroundColor="light"
+      padding="xl"
+      >
+<KpiChart/>
+      <LineGraphDefault/>
+      <TicketCardSection/>
+      <CardDashboard/>
       </Background>
     </div>
   );
