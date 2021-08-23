@@ -12,7 +12,7 @@ import {
   Title,
 } from "playbook-ui";
 
-const DefaultNav = (props) => (
+const LineGraphNav = (props) => (
   <Flex>
     <Nav orientation="vertical">
       <NavItem active>
@@ -66,4 +66,4 @@ const DefaultNav = (props) => (
   </Flex>
 );
 
-export default DefaultNav
+export default LineGraphNav;
