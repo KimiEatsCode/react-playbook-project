@@ -199,7 +199,7 @@ const CardDashboard = () => {
             <FulfillmentChart {...pipelineData} />
           </FlexItem>
           <FlexItem fixedSize="50%">
-            {" "}
+            
             <IconGrid {...ticketData} />
           </FlexItem>
         </Flex>
