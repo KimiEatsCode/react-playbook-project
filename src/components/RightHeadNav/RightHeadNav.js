@@ -4,7 +4,7 @@ import { Collapsible, Flex, FlexItem, Icon, Pill, User } from "playbook-ui"
 
 const RightHeadNav = (props) => (
   <div>
-    <Flex>
+    <Flex >
 <Icon
           fixedWidth
           icon="bell"
@@ -23,8 +23,8 @@ const RightHeadNav = (props) => (
       variant="primary"
   />
 
-  <Collapsible>
-    <Collapsible.Main>
+  <Collapsible padding="none">
+    <Collapsible.Main padding="none">
     <User
             align="left"
             avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
@@ -33,8 +33,8 @@ const RightHeadNav = (props) => (
             size="sm"
             {...props}
         />
-    </Collapsible.Main>
-    <Collapsible.Content>
+    </Collapsible.Main >
+    <Collapsible.Content padding="none">
       <div>
         {
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel erat sed purus hendrerit viverra. Duis et vestibulum metus. Sed consequat ut ante non vehicula. Etiam nunc massa, pharetra vel'
