@@ -1,5 +1,5 @@
 import CardDashboard from "../CardDashboard/CardDashboard";
-import BlockNav from "../BlockNav/BlockNav";
+import TicketCardSection from "../TicketCardSection/TicketCardSection";
 import LineGraphDefault from "../LineGraphDefault/LineGraphDefault";
 import KpiChart from "../KpiChart/KpiChart";
 import { Background, Flex } from "playbook-ui";
@@ -13,11 +13,12 @@ function App() {
         paddingX="xl"
         spacing="between"
     >
-      <Header></Header></Flex>
+      <Header></Header>
+      </Flex>
       <Background backgroundColor="light" padding="xl">
         <KpiChart />
         <LineGraphDefault />
-        <BlockNav />
+        <TicketCardSection />
         <CardDashboard />
       </Background>
     </div>

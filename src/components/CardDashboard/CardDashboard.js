@@ -7,6 +7,7 @@ import {
   Flex,
   FlexItem,
   IconStatValue,
+  Layout,
   ProgressSimple,
   SectionSeparator,
   Title,
@@ -136,6 +137,7 @@ const CardDashboard = () => {
   return (
     <>
       <div>
+        <Layout layout="collection_detail">
         <Flex orientation="row" wrap spacing="between">
           <FlexItem fixedSize="50%">
             <FulfillmentChart {...pipelineData} />
@@ -144,6 +146,7 @@ const CardDashboard = () => {
             <IconGrid {...ticketData} />
           </FlexItem>
         </Flex>
+        </Layout>
       </div>
     </>
   );
