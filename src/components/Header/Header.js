@@ -1,13 +1,21 @@
-import React from 'react';
-import LeftHeaderNav from '../LeftHeaderNav/LeftHeaderNav'
-import RightHeaderNav from '../RightHeadNav/RightHeadNav'
-
+import React from "react";
+import LeftHeaderNav from "../LeftHeaderNav/LeftHeaderNav";
+import RightHeaderNav from "../RightHeadNav/RightHeadNav";
+import { Flex, FlexItem } from "playbook-ui";
 
 const Header = () => (
-  <div>
-    <LeftHeaderNav></LeftHeaderNav>
-    <RightHeaderNav></RightHeaderNav>
-  </div>
+  <>
+    <Flex orientatin="row"> <FlexItem>
+      <RightHeaderNav></RightHeaderNav>
+    </FlexItem> </Flex>
+ <Flex orientatin="row"></Flex>
+    <FlexItem>
+      <LeftHeaderNav></LeftHeaderNav>
+    </FlexItem>
+    <Flex/>
+
+
+  </>
 );
 
 export default Header;
