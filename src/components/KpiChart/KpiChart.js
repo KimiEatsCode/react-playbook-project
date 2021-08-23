@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultNav from '../LineGraphNav/LineGraphNav';
+import LineGraphNav from '../LineGraphNav/LineGraphNav';
 import ListLayoutRight from '../ListLayoutRight/ListLayoutRight';
 import LineGraphDefault from '../LineGraphDefault/LineGraphDefault';
 import { Card,Flex, FlexItem, SectionSeparator } from 'playbook-ui';
@@ -23,7 +23,7 @@ const KpiChart = (props) => (
      <Flex spacing="between"
        orientation="row"
         wrap>
-      <FlexItem  grow><DefaultNav padding="none"></DefaultNav></FlexItem>
+      <FlexItem  grow><LineGraphNav padding="none"></LineGraphNav></FlexItem>
 
       <FlexItem>
     <LineGraphDefault/></FlexItem>
