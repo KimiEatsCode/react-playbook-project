@@ -1,10 +1,11 @@
 import React from 'react';
-import { Collapsible, Flex, FlexItem, Icon, Pill, User } from "playbook-ui"
+import { Collapsible, Flex, FlexItem, Icon, Nav, Pill, User } from "playbook-ui"
 
 
 const RightHeaderNav = (props) => (
   <div>
-
+    {/* <Flex orientation="row" align="end"> */}
+ <Nav orientation="horizontal">
 <Icon
           fixedWidth
           icon="bell"
@@ -42,7 +43,8 @@ const RightHeaderNav = (props) => (
       </div>
     </Collapsible.Content>
   </Collapsible>
-
+  </Nav>
+  {/* </Flex> */}
   </div>
 );
 

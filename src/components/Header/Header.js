@@ -1,26 +1,26 @@
 import React from "react";
 import LeftHeaderNav from "../LeftHeaderNav/LeftHeaderNav";
 import RightHeaderNav from "../RightHeaderNav/RightHeaderNav";
-import { Flex, FlexItem } from "playbook-ui";
+import { Background, Body, Card,Collapsible, Flex, FlexItem, Icon, Layout, Pill, Nav, NavItem, Title, User} from "playbook-ui";
+import MusicApp from "../MusicAppExample/MusicAppExample"
 
-const Header = () => (
+const Header = (props) => (
   <>
-  <Flex orientatin="column">
 
-    <Flex orientatin="row">
- 
-    <FlexItem>
-      <LeftHeaderNav></LeftHeaderNav>
-    </FlexItem>
-    </Flex>
 
-    <Flex orientatin="row">
-      <FlexItem>
-        <RightHeaderNav></RightHeaderNav>
-      </FlexItem>
-    </Flex>
+<Flex orientation="row" align="end" {...props}>
+  <FlexItem>
+ <RightHeaderNav ></RightHeaderNav>
+ </FlexItem>
+ </Flex>
 
-    </Flex>
+<Flex orientation="row" {...props}>
+      <Title>left</Title>
+      </Flex>
+
+
+
+
   </>
 );
 

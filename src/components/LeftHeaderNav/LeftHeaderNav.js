@@ -4,6 +4,8 @@ import { Flex, FlexItem, Nav, NavItem } from 'playbook-ui'
 
 const LeftHeaderNav = (props) => {
   return (
+    <Flex orientation="row">
+      <FlexItem>
     <Nav
         link="#"
         orientation="horizontal"
@@ -31,6 +33,8 @@ const LeftHeaderNav = (props) => {
           {...props}
       />
     </Nav>
+    </FlexItem>
+    </Flex>
   )
 }
 

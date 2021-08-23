@@ -2,19 +2,18 @@ import CardDashboard from "../CardDashboard/CardDashboard";
 import TicketCardSection from "../TicketCardSection/TicketCardSection";
 import LineGraphDefault from "../LineGraphDefault/LineGraphDefault";
 import KpiChart from "../KpiChart/KpiChart";
-import { Background, Flex } from "playbook-ui";
+import { Background, Flex, FlexItem, Title } from "playbook-ui";
 import   Header from "../Header/Header"
+import RightHeaderNav from "../RightHeaderNav/RightHeaderNav";
+import LeftHeaderNav from "../LeftHeaderNav/LeftHeaderNav";
 
 function App() {
   return (
     <div className="App">
-       <Flex
-        paddingTop="md"
-        paddingX="xl"
-        spacing="between"
-    >
-      <Header></Header>
-      </Flex>
+       <Flex orientation="row" justify="right">
+     <RightHeaderNav></RightHeaderNav>
+     </Flex>
+     <LeftHeaderNav></LeftHeaderNav>
       <Background backgroundColor="light" padding="xl">
         <KpiChart />
         <LineGraphDefault />
