@@ -22,19 +22,16 @@ import "bootstrap/dist/css/bootstrap.css";
 
 
 
-const List = ({ index, items, selected, onRemove, propThatHasFunction }) => (
-  <ul className="li">{index}
+const List = ({ index, items, selected, onRemove, propThatHasFunction }) => {
+
+const test="sideBorder"
+
+return (
+  <ul className={test}>{index}
     {items.map((item, index) => (
       <li key={index} checked={selected === index}>
         <span
-          style={
-            selected === index
-              ? {
-                  color: "blue",
-                  fontWeight: "bold"
-                }
-              : {}
-          }
+        className={selected === index ? "sideBorder" : ""}
           onClick={() => propThatHasFunction(index)}
         >
           {item}
@@ -44,7 +41,7 @@ const List = ({ index, items, selected, onRemove, propThatHasFunction }) => (
     ))}
   </ul>
 );
-
+}
 class PracticeClickIndex extends Component {
   state = {
     value: "",
