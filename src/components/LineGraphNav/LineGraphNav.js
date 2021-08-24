@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Flex,
@@ -12,16 +12,27 @@ import {
   Title,
 } from "playbook-ui";
 
-const LineGraphNav = (props) => (
-  <Flex>
+
+
+const LineGraphNav = (props) => {
+
+  const [selected, setSelected] = useState(0);
+
+  const handleActiveItem = index => {
+   setSelected({selected:index})
+
+  }
+
+return (
+  <Flex>{selected}
     <Nav orientation="vertical">
-      <NavItem active>
+      <NavItem active onClick={()=> setSelected(handleActiveItem(5))}>
       <Flex spacing="between">
             <Title size={4} text="Revenue" />
             <StatChange change="decrease" value="2" />
           </Flex>
       </NavItem>
-      <NavItem>
+      <NavItem onClick={()=> setSelected(handleActiveItem)}>
         <Flex spacing="between">
           <Title size={4} text="Orders" />
           <StatChange change="decrease" value="2" />
@@ -65,5 +76,5 @@ const LineGraphNav = (props) => (
     </Nav>
   </Flex>
 );
-
+}
 export default LineGraphNav;
