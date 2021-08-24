@@ -15,25 +15,26 @@ import {
 
 const DyanmicList = ({ index, items, selected, onRemove, propThatHasFunction }) => {
 
-  const [selected, setSelected] = useState(0);
-
-  const handleActiveItem = index => {
-   setSelected({selected:index})
-
-  }
-
   return (
-    <ul className={test}>{index}
+    <ul>{index}
       {items.map((item, index) => (
-        <li key={index} checked={selected === index}>
+        <li key={index}>
           <span
-          className={selected === index ? "sideBorder" : ""}
-            // onClick={() => propThatHasFunction(index)}
-            onClick={()=> setSelected(handleActiveItem)}
+           style={
+            selected === index
+              ? {
+                  color: "red",
+                  fontWeight: "bold"
+                }
+              : {}
+          }
+
+            onClick={()=> propThatHasFunction(index)}
           >
-            {item}
-          </span>
+       test
+          </span>   <p> selected is {selected} and index is {index}</p>
         </li>
+
       ))}
     </ul>
   );
@@ -41,21 +42,21 @@ const DyanmicList = ({ index, items, selected, onRemove, propThatHasFunction }) 
 
 const LineGraphNav = (props) => {
 
-  // const [selected2, setSelected] = useState(0);
+  const [selected, setSelected] = useState(0);
 
-  // const handleActiveItem = index => {
-  //  setSelected({selected2:index})
-
-  // }
+  const handleActiveItem = index => {
+    console.log(selected)
+    return setSelected({selected:index});
+  };
 
 return (
+<div> {selected}
   <DyanmicList
-  items={items}
+  items={[1,2,3]}
   selected={selected}
-  propThatHasFunction={this.handleActiveItem}
-  // onRemove={this.handleRemove}
+  propThatHasFunction={handleActiveItem}
 />
-
+</div>
   // <Flex>{selected2}
 
   //   <Nav orientation="vertical">
