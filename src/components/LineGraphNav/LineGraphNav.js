@@ -41,66 +41,73 @@ const DyanmicList = ({ index, items, selected, onRemove, propThatHasFunction }) 
 
 const LineGraphNav = (props) => {
 
-  const [selected, setSelected] = useState(0);
+  // const [selected2, setSelected] = useState(0);
 
-  const handleActiveItem = index => {
-   setSelected({selected:index})
+  // const handleActiveItem = index => {
+  //  setSelected({selected2:index})
 
-  }
+  // }
 
 return (
-  <DyanmicList selected={}></DyanmicList>
-  <Flex>{selected}
-    <Nav orientation="vertical">
-      <NavItem active onClick={()=> setSelected(handleActiveItem(5))}>
-      <Flex spacing="between">
-            <Title size={4} text="Revenue" />
-            <StatChange change="decrease" value="2" />
-          </Flex>
-      </NavItem>
-      <NavItem onClick={()=> setSelected(handleActiveItem)}>
-        <Flex spacing="between">
-          <Title size={4} text="Orders" />
-          <StatChange change="decrease" value="2" />
-        </Flex>
-      </NavItem>
-      <NavItem>
-      <Flex spacing="between">
-            <Title size={4} text="Orders" />
-            <StatChange change="decrease" value="2" />
-          </Flex>
+  <DyanmicList
+  items={items}
+  selected={selected}
+  propThatHasFunction={this.handleActiveItem}
+  // onRemove={this.handleRemove}
+/>
 
-      </NavItem>
-      <NavItem>
-      <Flex spacing="between">
-            <Title size={4} text="Profit" />
-            <StatChange change="decrease" value="2" />
-          </Flex>
+  // <Flex>{selected2}
 
-      </NavItem>
-      <NavItem>
-      <Flex spacing="between">
-            <Title size={4} text="Average Check" />
-            <StatChange change="decrease" value="2" />
+  //   <Nav orientation="vertical">
+  //     <NavItem active onClick={()=> setSelected(handleActiveItem)}>
+  //     <Flex spacing="between">
+  //           <Title size={4} text="Revenue" />
+  //           <StatChange change="decrease" value="2" />
+  //         </Flex>
+  //     </NavItem>
+  //     <NavItem onClick={()=> setSelected(handleActiveItem)}>
+  //       <Flex spacing="between">
+  //         <Title size={4} text="Orders" />
+  //         <StatChange change="decrease" value="2" />
+  //       </Flex>
+  //     </NavItem>
+  //     <NavItem>
+  //     <Flex spacing="between">
+  //           <Title size={4} text="Orders" />
+  //           <StatChange change="decrease" value="2" />
+  //         </Flex>
 
-        </Flex>
-      </NavItem>
-      <NavItem>
-      <Flex spacing="between">
-            <Title size={4} text="Canceled" />
-            <StatChange change="decrease" value="2" />
+  //     </NavItem>
+  //     <NavItem>
+  //     <Flex spacing="between">
+  //           <Title size={4} text="Profit" />
+  //           <StatChange change="decrease" value="2" />
+  //         </Flex>
 
-        </Flex>
-      </NavItem>
-      <NavItem>
-      <Flex spacing="between">
-            <Title size={4} text="Repeat Sales" />
-            <StatChange change="decrease" value="2" />
+  //     </NavItem>
+  //     <NavItem>
+  //     <Flex spacing="between">
+  //           <Title size={4} text="Average Check" />
+  //           <StatChange change="decrease" value="2" />
 
-        </Flex>
-      </NavItem>
-    </Nav>
-  </Flex>
+  //       </Flex>
+  //     </NavItem>
+  //     <NavItem>
+  //     <Flex spacing="between">
+  //           <Title size={4} text="Canceled" />
+  //           <StatChange change="decrease" value="2" />
+
+  //       </Flex>
+  //     </NavItem>
+  //     <NavItem>
+  //     <Flex spacing="between">
+  //           <Title size={4} text="Repeat Sales" />
+  //           <StatChange change="decrease" value="2" />
+
+  //       </Flex>
+  //     </NavItem>
+  //   </Nav>
+  // </Flex>
 );
 }
 export default LineGraphNav;
