@@ -9,12 +9,11 @@ const data = [{
   data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
 }]
 
-const GraphTitle = styled.p `
-text-align:left;
-padding:10px 20px ;
-color:grey;
-font-weight:bold;
-`;
+const data2 = [{
+  name: 'Number of Installations 2',
+  data: [400, 52503, 200, 69658, 97031, 100, 137133, 154175],
+}]
+
 
 const LineGraphDefault = (props) =>(
   <div>
@@ -29,7 +28,7 @@ flex={4}
     padding="20%">
 <LineGraph
 
-        chartData={data}
+        chartData={data2}
         id="line-fixed-height"
         xAxisCategories={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']}
         yAxisMin={0}
