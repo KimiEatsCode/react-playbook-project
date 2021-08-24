@@ -12,16 +12,12 @@ import {
   Title,
 } from "playbook-ui";
 
- const testFunction = () => {
-    console.log('test event');
-}
-
 const LineGraphNav = (props) => (
   <Flex>
     <Nav orientation="vertical">
       <NavItem active>
       <Flex spacing="between">
-            <Title text="Revenue" />
+            <Title size={4} text="Revenue" />
             <StatChange change="decrease" value="2" />
           </Flex>
       </NavItem>

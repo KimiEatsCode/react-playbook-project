@@ -6,10 +6,12 @@ import { Background, Flex, FlexItem, Title } from "playbook-ui";
 import   Header from "../Header/Header"
 import RightHeaderNav from "../RightHeaderNav/RightHeaderNav";
 import LeftHeaderNav from "../LeftHeaderNav/LeftHeaderNav";
+import PracticeClickIndex from "../PracticeClickIndex/PracticeClickIndex"
 
 function App() {
   return (
     <div className="App">
+      <PracticeClickIndex></PracticeClickIndex>
     <Header></Header>
       <Background backgroundColor="light" padding="xl">
         <KpiChart />
