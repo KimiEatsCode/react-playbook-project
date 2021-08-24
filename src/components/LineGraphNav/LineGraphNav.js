@@ -15,17 +15,24 @@ import {
 
 const DyanmicList = ({ index, items, selected, onRemove, propThatHasFunction }) => {
 
+  const [selected, setSelected] = useState(0);
+
+  const handleActiveItem = index => {
+   setSelected({selected:index})
+
+  }
+
   return (
     <ul className={test}>{index}
       {items.map((item, index) => (
         <li key={index} checked={selected === index}>
           <span
           className={selected === index ? "sideBorder" : ""}
-            onClick={() => propThatHasFunction(index)}
+            // onClick={() => propThatHasFunction(index)}
+            onClick={()=> setSelected(handleActiveItem)}
           >
             {item}
           </span>
-          {/* <Button onClick={() => onRemove(index)} /> */}
         </li>
       ))}
     </ul>
@@ -42,6 +49,7 @@ const LineGraphNav = (props) => {
   }
 
 return (
+  <DyanmicList selected={}></DyanmicList>
   <Flex>{selected}
     <Nav orientation="vertical">
       <NavItem active onClick={()=> setSelected(handleActiveItem(5))}>
