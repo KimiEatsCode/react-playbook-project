@@ -2,23 +2,25 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-const Button = ({ onClick, disabled = false, color = "danger" }) => (
-  <button
-    style={{
-      height: 30,
-      verticalAlign: "middle",
-      width: 30,
-      margin: "1px 5px",
-      borderRadius: "50%",
-      border: "none"
-    }}
-    className={`btn btn-sm btn-${color}`}
-    disabled={disabled}
-    onClick={onClick}
-  >
-    {color === "danger" ? "X" : "+"}
-  </button>
-);
+// const Button = ({ onClick, disabled = false, color = "danger" }) => (
+//   <button
+//     style={{
+//       height: 30,
+//       verticalAlign: "middle",
+//       width: 30,
+//       margin: "1px 5px",
+//       borderRadius: "50%",
+//       border: "none"
+//     }}
+//     className={`btn btn-sm btn-${color}`}
+//     disabled={disabled}
+//     onClick={onClick}
+//   >
+//     {color === "danger" ? "X" : "+"}
+//   </button>
+// );
+
+
 
 const List = ({ items, selected, onRemove, onClick }) => (
   <ul className="li">
@@ -28,7 +30,7 @@ const List = ({ items, selected, onRemove, onClick }) => (
           style={
             selected === index
               ? {
-                  color: "red",
+                  color: "blue",
                   fontWeight: "bold"
                 }
               : {}
@@ -37,7 +39,7 @@ const List = ({ items, selected, onRemove, onClick }) => (
         >
           {item}
         </span>
-        <Button onClick={() => onRemove(index)} />
+        {/* <Button onClick={() => onRemove(index)} /> */}
       </li>
     ))}
   </ul>
@@ -46,23 +48,23 @@ const List = ({ items, selected, onRemove, onClick }) => (
 class PracticeClickIndex extends Component {
   state = {
     value: "",
-    items: [],
+    items: [1,2,3,4],
     selected: -1
   };
 
-  handleChange = e => {
-    this.setState({
-      [e.currentTarget.name]: e.currentTarget.value
-    });
-  };
+  // handleChange = e => {
+  //   this.setState({
+  //     [e.currentTarget.name]: e.currentTarget.value
+  //   });
+  // };
 
-  handleAdd = () => {
-    const { items, value } = this.state;
-    this.setState({
-      items: [...items, value],
-      value: ""
-    });
-  };
+  // handleAdd = () => {
+  //   const { items, value } = this.state;
+  //   this.setState({
+  //     items: [...items, value],
+  //     value: ""
+  //   });
+  // };
 
   handleRemove = index => {
     const { items, selected } = this.state;
@@ -84,7 +86,7 @@ class PracticeClickIndex extends Component {
     const { value, items, selected } = this.state;
     return (
       <div>
-        <input
+        {/* <input
           type="text"
           value={value}
           name="value"
@@ -95,7 +97,7 @@ class PracticeClickIndex extends Component {
           icon="X"
           color="success"
           onClick={this.handleAdd}
-        />
+        /> */}
         <List
           items={items}
           selected={selected}
