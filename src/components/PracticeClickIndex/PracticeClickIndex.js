@@ -22,8 +22,8 @@ import "bootstrap/dist/css/bootstrap.css";
 
 
 
-const List = ({ items, selected, onRemove, onClick }) => (
-  <ul className="li">
+const List = ({ index, items, selected, onRemove, propThatHasFunction }) => (
+  <ul className="li">{index}
     {items.map((item, index) => (
       <li key={index} checked={selected === index}>
         <span
@@ -35,7 +35,7 @@ const List = ({ items, selected, onRemove, onClick }) => (
                 }
               : {}
           }
-          onClick={() => onClick(index)}
+          onClick={() => propThatHasFunction(index)}
         >
           {item}
         </span>
@@ -49,7 +49,7 @@ class PracticeClickIndex extends Component {
   state = {
     value: "",
     items: [1,2,3,4],
-    selected: -1
+    selected: 0
   };
 
   // handleChange = e => {
@@ -66,20 +66,20 @@ class PracticeClickIndex extends Component {
   //   });
   // };
 
-  handleRemove = index => {
-    const { items, selected } = this.state;
-    items.splice(index, 1);
-    if (index < selected) index = selected - 1;
-    if (index === selected) index = -1;
-    if (index > selected) index = selected;
-    this.setState({
-      items: items,
-      selected: index
-    });
-  };
+  // handleRemove = index => {
+  //   const { items, selected } = this.state;
+  //   items.splice(index, 1);
+  //   if (index < selected) index = selected - 1;
+  //   if (index === selected) index = -1;
+  //   if (index > selected) index = selected;
+  //   this.setState({
+  //     items: items,
+  //     selected: index
+  //   });
+  // };
 
   handleActiveItem = index => {
-    this.setState({ selected: index });
+    this.setState({selected: index});
   };
 
   render() {
@@ -101,8 +101,8 @@ class PracticeClickIndex extends Component {
         <List
           items={items}
           selected={selected}
-          onClick={this.handleActiveItem}
-          onRemove={this.handleRemove}
+          propThatHasFunction={this.handleActiveItem}
+          // onRemove={this.handleRemove}
         />
       </div>
     );
