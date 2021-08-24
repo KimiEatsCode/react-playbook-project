@@ -13,6 +13,24 @@ import {
 } from "playbook-ui";
 
 
+const DyanmicList = ({ index, items, selected, onRemove, propThatHasFunction }) => {
+
+  return (
+    <ul className={test}>{index}
+      {items.map((item, index) => (
+        <li key={index} checked={selected === index}>
+          <span
+          className={selected === index ? "sideBorder" : ""}
+            onClick={() => propThatHasFunction(index)}
+          >
+            {item}
+          </span>
+          {/* <Button onClick={() => onRemove(index)} /> */}
+        </li>
+      ))}
+    </ul>
+  );
+  }
 
 const LineGraphNav = (props) => {
 
