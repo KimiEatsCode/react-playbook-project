@@ -1,25 +1,18 @@
 import React from "react";
 import LeftHeaderNav from "../LeftHeaderNav/LeftHeaderNav";
 import RightHeaderNav from "../RightHeaderNav/RightHeaderNav";
-import { Background, Body, Card,Collapsible, Flex, FlexItem, Icon, Layout, Pill, Nav, NavItem, Title, User} from "playbook-ui";
-import MusicApp from "../MusicAppExample/MusicAppExample"
+import {  Flex, FlexItem, Icon, Layout, Pill, Nav, NavItem, Title, User} from "playbook-ui";
+import logo from "../../images/logo.png"
 
 const Header = (props) => (
   <>
-
-
-<Flex orientation="row" align="end" {...props}>
-  <FlexItem>
- <RightHeaderNav ></RightHeaderNav>
- </FlexItem>
- </Flex>
-
-<Flex orientation="row" {...props}>
-      <Title>left</Title>
-      </Flex>
-
-
-
+   <Flex orientation="row" justify="right" spacing="between">
+     <FlexItem><img className="logoTopNav"alt="PBJ logo"src={logo}></img></FlexItem>
+     <FlexItem>
+     <RightHeaderNav></RightHeaderNav>
+     </FlexItem>
+     </Flex>
+     <LeftHeaderNav></LeftHeaderNav>
 
   </>
 );

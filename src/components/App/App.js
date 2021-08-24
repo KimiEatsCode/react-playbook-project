@@ -10,10 +10,7 @@ import LeftHeaderNav from "../LeftHeaderNav/LeftHeaderNav";
 function App() {
   return (
     <div className="App">
-       <Flex orientation="row" justify="right">
-     <RightHeaderNav></RightHeaderNav>
-     </Flex>
-     <LeftHeaderNav></LeftHeaderNav>
+    <Header></Header>
       <Background backgroundColor="light" padding="xl">
         <KpiChart />
         <LineGraphDefault />
