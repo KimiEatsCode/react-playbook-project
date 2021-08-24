@@ -16,27 +16,20 @@ import {
 const DyanmicList = ({ index, items, selected, onRemove, propThatHasFunction }) => {
 
   return (
-    <ul>{index}
-      {items.map((item, index) => (
-        <li key={index}>
-          <span
-           style={
-            selected === index
-              ? {
-                  color: "red",
-                  fontWeight: "bold"
-                }
-              : {}
-          }
-
-            onClick={()=> propThatHasFunction(index)}
-          >
-       test
-          </span>   <p> selected is {selected} and index is {index}</p>
-        </li>
-
-      ))}
-    </ul>
+    <>
+<Flex>
+   <Nav orientation="vertical">
+   {items.map((item, index) => (
+     <NavItem className={selected === index ? "sideBorder" : ""} onClick={()=> propThatHasFunction(index)}>
+      <Flex spacing="between">
+            <Title size={4} text="Revenue" />
+            <StatChange change="decrease" value="2" />
+          </Flex>
+      </NavItem>
+   ))}
+</Nav>
+</Flex>
+    </>
   );
   }
 
@@ -46,7 +39,7 @@ const LineGraphNav = (props) => {
 
   const handleActiveItem = index => {
     console.log(selected)
-    return setSelected({selected:index});
+    return setSelected(index);
   };
 
 return (
