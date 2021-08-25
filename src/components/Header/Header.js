@@ -4,7 +4,10 @@ import RightHeaderNav from "../RightHeaderNav/RightHeaderNav";
 import {  Flex, FlexItem, Icon, Layout, Pill, Nav, NavItem, Title, User} from "playbook-ui";
 import logo from "../../images/logo.png"
 
-const Header = (props) => (
+const Header = (props) => {
+
+
+return (
   <>
    <Flex orientation="row" justify="right" spacing="between" align="start">
      <FlexItem><img className="logoTopNav"alt="PBJ logo"src={logo}></img></FlexItem>
@@ -16,5 +19,5 @@ const Header = (props) => (
 
   </>
 );
-
+}
 export default Header;
