@@ -1,10 +1,18 @@
-import React from 'react';
-import { Collapsible, Flex, FlexItem, Icon, Nav, Badge, User } from "playbook-ui"
+import React, { useState } from 'react';
+import { Badge, Collapsible, Flex, FlexItem, Icon, Nav, NavItem, User } from "playbook-ui"
 
 
-const RightHeaderNav = (props) => (
+const RightHeaderNav = (props) => {
+const[inHover, setHover] = useState(false)
+return (
   <div>
-    {/* <Flex orientation="row" align="end"> */}
+  <button
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        Hover over me!
+      </button>
+      {inHover && <p>Hi!</p>}
  <Nav orientation="horizontal" padding="xs">
 <Icon
           fixedWidth
@@ -28,9 +36,8 @@ const RightHeaderNav = (props) => (
           variant="primary"
           {...props}
       />
+ {inHover && <p>Hi!</p>}
 
-  <Collapsible padding="none">
-    <Collapsible.Main padding="none">
     <User
             align="left"
             avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
@@ -39,19 +46,14 @@ const RightHeaderNav = (props) => (
             size="sm"
             {...props}
         />
-    </Collapsible.Main >
-    <Collapsible.Content padding="none">
-      <div>
-        {
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel erat sed purus hendrerit viverra. Duis et vestibulum metus. Sed consequat ut ante non vehicula. Etiam nunc massa, pharetra vel'
-        }
-      </div>
-    </Collapsible.Content>
-  </Collapsible>
+
+  </Nav>
+  <Nav>
+  {inHover && <p>Hi!</p>}
   </Nav>
   {/* </Flex> */}
   </div>
 );
-
+}
 
 export default RightHeaderNav;

@@ -6,7 +6,7 @@ import logo from "../../images/logo.png"
 
 const Header = (props) => (
   <>
-   <Flex orientation="row" justify="right" spacing="between">
+   <Flex orientation="row" justify="right" spacing="between" align="start">
      <FlexItem><img className="logoTopNav"alt="PBJ logo"src={logo}></img></FlexItem>
      <FlexItem>
      <RightHeaderNav></RightHeaderNav>
