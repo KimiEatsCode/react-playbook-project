@@ -1,10 +1,11 @@
 import React from 'react'
-
 import { Flex, FlexItem, Nav, NavItem } from 'playbook-ui'
 
 const LeftHeaderNav = (props) => {
   return (
     <Flex orientation="row">
+
+
       <FlexItem>
     <Nav
         link="#"
@@ -13,23 +14,23 @@ const LeftHeaderNav = (props) => {
     >
       <NavItem
           link="#"
-          text="About"
+          text="Dashboard"
           {...props}
       />
       <NavItem
           active
           link="#"
-          text="Case Studies"
+          text="Products"
           {...props}
       />
       <NavItem
           link="#"
-          text="Service"
+          text="In Progress"
           {...props}
       />
       <NavItem
           link="#"
-          text="Contacts"
+          text="Settings"
           {...props}
       />
     </Nav>
