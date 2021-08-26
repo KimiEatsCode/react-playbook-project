@@ -1,23 +1,33 @@
-import React from 'react';
-import { Collapsible, Flex, FlexItem, Icon, Nav, Badge, User } from "playbook-ui"
+import React, { useState } from 'react';
+import { Badge, Card, Collapsible, Flex, FlexItem, Icon, Nav, NavItem, User } from "playbook-ui"
 
 
-const RightHeaderNav = (props) => (
+const RightHeaderNav = (props) => {
+const[inHover, setHover] = useState(false);
+const testFunction = (testing) => {
+  console.log('this is ' + testing)
+}
+
+return (
   <div>
-    {/* <Flex orientation="row" align="end"> */}
- <Nav orientation="horizontal" padding="xs">
-<Icon
+
+ <Nav orientation="horizontal" padding="xs"  highlight={false}
+        variant="subtle">
+<NavItem>
+  <Icon
           fixedWidth
           icon="bell"
           {...props}
       />
 
 <Badge
+
           text="4"
           variant="primary"
           {...props}
       />
-
+</NavItem>
+<NavItem>
 <Icon
           fixedWidth
           icon="inbox"
@@ -28,10 +38,12 @@ const RightHeaderNav = (props) => (
           variant="primary"
           {...props}
       />
+</NavItem>
 
-  <Collapsible padding="none">
-    <Collapsible.Main padding="none">
-    <User
+ <div onClick={props.testFunction}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >  <User clickHandler={testFunction}
             align="left"
             avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
             name="Anna Black"
@@ -39,19 +51,35 @@ const RightHeaderNav = (props) => (
             size="sm"
             {...props}
         />
-    </Collapsible.Main >
-    <Collapsible.Content padding="none">
-      <div>
-        {
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel erat sed purus hendrerit viverra. Duis et vestibulum metus. Sed consequat ut ante non vehicula. Etiam nunc massa, pharetra vel'
-        }
-      </div>
-    </Collapsible.Content>
-  </Collapsible>
+
+        </div>
+
   </Nav>
-  {/* </Flex> */}
+
+{inHover &&
+<Card padding="none" className="hoverNav">
+  <Nav
+
+      padding="none"
+      link="#"
+      orientation="vertical"
+      {...props}
+  >
+    <NavItem
+        link="#"
+        text="Profile"
+        {...props}
+    />
+    <NavItem
+        link="#"
+        text="Settings"
+        {...props}
+    />
+  </Nav>
+  </Card>
+}
   </div>
 );
-
+}
 
 export default RightHeaderNav;
