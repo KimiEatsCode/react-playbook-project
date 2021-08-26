@@ -1,33 +1,31 @@
 import React, { useState } from 'react';
-import { Badge, Card, Collapsible, Flex, FlexItem, Icon, Nav, NavItem, User } from "playbook-ui"
+import { Badge, Collapsible, Flex, FlexItem, Icon, Nav, NavItem, User } from "playbook-ui"
 
 
 const RightHeaderNav = (props) => {
-const[inHover, setHover] = useState(false);
-const testFunction = (testing) => {
-  console.log('this is ' + testing)
-}
-
+const[inHover, setHover] = useState(false)
 return (
   <div>
-
- <Nav orientation="horizontal" padding="xs"  highlight={false}
-        variant="subtle">
-<NavItem>
-  <Icon
+  <button
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        Hover over me!
+      </button>
+      {inHover && <p>Hi!</p>}
+ <Nav orientation="horizontal" padding="xs">
+<Icon
           fixedWidth
           icon="bell"
           {...props}
       />
 
 <Badge
-
           text="4"
           variant="primary"
           {...props}
       />
-</NavItem>
-<NavItem>
+
 <Icon
           fixedWidth
           icon="inbox"
@@ -38,12 +36,9 @@ return (
           variant="primary"
           {...props}
       />
-</NavItem>
+ {inHover && <p>Hi!</p>}
 
- <div onClick={props.testFunction}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >  <User clickHandler={testFunction}
+    <User
             align="left"
             avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
             name="Anna Black"
@@ -52,32 +47,11 @@ return (
             {...props}
         />
 
-        </div>
-
   </Nav>
-
-{inHover &&
-<Card padding="none" className="hoverNav">
-  <Nav
-
-      padding="none"
-      link="#"
-      orientation="vertical"
-      {...props}
-  >
-    <NavItem
-        link="#"
-        text="Profile"
-        {...props}
-    />
-    <NavItem
-        link="#"
-        text="Settings"
-        {...props}
-    />
+  <Nav>
+  {inHover && <p>Hi!</p>}
   </Nav>
-  </Card>
-}
+  {/* </Flex> */}
   </div>
 );
 }
