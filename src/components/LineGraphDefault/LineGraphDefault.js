@@ -9,32 +9,35 @@ import {
 } from "playbook-ui";
 import { GraphContext  } from "../MyProvider/MyProvider";
 
-const data2 = [
-  {
-    name: "Number of Installations",
-    data: [322, 43, 57177, 69658, 97031, 4, 137133, 154175],
-  },
-];
-
-// const data = [{
-//   name: 'Number of Installations',
-//   data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
-// }]
 
 
 const LineGraphDefault = (props) => {
   const graph = useContext(GraphContext);
+  // const data2 = [
+  //   {
+  //     name: "Data 2",
+  //     data: [69658, 43, 57177, 69658, 97031, 4, 137133, 154175],
+  //   },
+  // ];
+
+  // const data3 = [
+  //   {
+  //     name: "Data 2",
+  //     data: [322, 43, 57177, 69658, 97031, 4, 137133, 154175],
+  //   },
+  // ];
+
 
 
 return (
   <div>
- 
+ {graph.dataState[0].name} {graph.dataState[0].data}
     <Flex flex={4}>
       <FlexItem>
-{graph.name}
+
         <Card padding="20%">
           <LineGraph
-            chartData={data2}
+            chartData={graph.dataState}
             id="line-fixed-height"
             xAxisCategories={[
               "Jan",

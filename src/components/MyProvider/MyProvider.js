@@ -9,15 +9,8 @@ export const GraphContext = createContext();
 
   const data1 = [
     {
-      name: "Number of Installations",
+      name: "Data 0",
       data: [3, 52503, 57177, 3, 3, 119931, 137133, 154175],
-    },
-  ];
-
-  const data2 = [
-    {
-      name: "Number of Installations",
-      data: [322, 43, 57177, 69658, 97031, 4, 137133, 154175],
     },
   ];
 

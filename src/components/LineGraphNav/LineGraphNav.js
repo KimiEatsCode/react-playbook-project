@@ -33,14 +33,14 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
   return (
     <>
 <Flex>
-  {graph.data}
+
    <Nav orientation="vertical">
    {navData.map((item, index) => (
      <NavItem key={index} className={selected === index ? "sideBorder" : ""} onMouseEnter={()=> propThatHasFunction(index)}
 
      onClick={()=> changeDataSetFunction(index)}>
       <Flex spacing="between">
-            <Title size={4} text={item.label} />
+            <Title size={4} text={item.label} />{index}
             <StatChange change={item.change} value={item.percent} />
           </Flex>
       </NavItem>
@@ -53,17 +53,42 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
 
   const data1 = [
     {
-      name: "Number of Installations",
+      name: "Data 1",
       data: [2, 2, 2, 69658, 97031, 4, 137133, 154175],
     },
   ];
 
   const data2 = [
     {
-      name: "Number of Installations",
+      name: "Data 2",
+      data: [2, 2, 2, 69658, 97031, 4, 137133, 154175],
+    },
+  ];
+
+
+  const data3 = [
+    {
+      name: "Data 3",
+      data: [2, 2, 2, 69658, 97031, 4, 137133, 154175],
+    },
+  ];
+
+
+
+  const data4 = [
+    {
+      name: "Data 4",
       data: [322, 43, 57177, 69658, 97031, 4, 137133, 154175],
     },
   ];
+
+  const data5 = [
+    {
+      name: "Data 5",
+      data: [2, 2, 2, 69658, 97031, 4, 137133, 154175],
+    },
+  ];
+
 
 const LineGraphNav = (props) => {
 
@@ -75,34 +100,40 @@ const LineGraphNav = (props) => {
     return setSelected(index);
   };
 
-  const test = x => {
-    switch(x) {
+  const dataSets = index => {
+    switch(index) {
       case 1:
-      return graph.setData(data1);
+       return graph.setData(data1);
       case 2:
-      return graph.setData(data2);
+        return graph.setData(data2);
+      case 3:
+        return graph.setData(data3);
+      case 4:
+        return graph.setData(data4);
+      case 5:
+        return graph.setData(data5);
       default:
-      console.log(graph.data)
+      console.log("default")
     }
   };
 
-  const test2 = x => {
-    switch(x) {
-      case 1:
-      return graph.setName("Joseph");
-      case 2:
-      return graph.setName("Charles");
-      default:
-      console.log(graph.name)
-    }
-  };
+  // const test2 = x => {
+  //   switch(x) {
+  //     case 1:
+  //     return graph.setName("Joseph");
+  //     case 2:
+  //     return graph.setName("Charles");
+  //     default:
+  //     console.log(graph.name)
+  //   }
+  // };
 
 return (
 <div>
 
   <DyanmicList
   selected={selected}
-  changeDataSetFunction={test2}
+  changeDataSetFunction={dataSets}
   propThatHasFunction={handleActiveItem}
   {...lineGraphNavJSON}
 />
