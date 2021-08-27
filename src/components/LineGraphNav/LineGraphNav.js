@@ -84,16 +84,25 @@ const LineGraphNav = (props) => {
       default:
       console.log(graph.data)
     }
-
   };
 
+  const test2 = x => {
+    switch(x) {
+      case 1:
+      return graph.setName("Joseph");
+      case 2:
+      return graph.setName("Charles");
+      default:
+      console.log(graph.name)
+    }
+  };
 
 return (
 <div>
 
   <DyanmicList
   selected={selected}
-  changeDataSetFunction={test}
+  changeDataSetFunction={test2}
   propThatHasFunction={handleActiveItem}
   {...lineGraphNavJSON}
 />

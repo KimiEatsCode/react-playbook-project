@@ -21,12 +21,15 @@ export const GraphContext = createContext();
     },
   ];
 
-  const [data, setData] = useState(data1);
+  const [name, setName] = useState("john");
+  const [dataState, setData] = useState(data1);
 
   return (
     <GraphContext.Provider
       value={{
-        data,
+        name,
+        dataState,
+        setName,
         setData,
       }}
     >
