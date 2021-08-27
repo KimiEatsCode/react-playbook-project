@@ -9,20 +9,25 @@ import {
 } from "playbook-ui";
 import { GraphContext  } from "../MyProvider/MyProvider";
 
-
+const data2 = [
+  {
+    name: "Number of Installations",
+    data: [322, 43, 57177, 69658, 97031, 4, 137133, 154175],
+  },
+];
 
 const LineGraphDefault = (props) => {
   const graph = useContext(GraphContext);
 
 return (
   <div>
-
+{graph.data}
     <Flex flex={4}>
       <FlexItem>
 
         <Card padding="20%">
           <LineGraph
-            chartData={graph.data}
+            chartData="data2"
             id="line-fixed-height"
             xAxisCategories={[
               "Jan",

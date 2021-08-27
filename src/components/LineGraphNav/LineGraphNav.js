@@ -13,6 +13,7 @@ import {
 } from "playbook-ui";
 import { GraphContext } from '../MyProvider/MyProvider';
 
+
 const lineGraphNavJSON = {
   title: "Pipeline Chart",
   navData: [
@@ -25,30 +26,19 @@ const lineGraphNavJSON = {
   ],
 };
 
-const data1 = [
-  {
-    name: "Number of Installations",
-    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
-  },
-];
 
-const data2 = [
-  {
-    name: "Number of Installations",
-    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
-  },
-];
 
 const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataSetFunction }) => {
-
+  const graph = useContext(GraphContext);
   return (
     <>
 <Flex>
+  {graph.data}
    <Nav orientation="vertical">
    {navData.map((item, index) => (
      <NavItem key={index} className={selected === index ? "sideBorder" : ""} onMouseEnter={()=> propThatHasFunction(index)}
 
-     onClick={()=> changeDataSetFunction(data)}>
+     onClick={()=> changeDataSetFunction(index)}>
       <Flex spacing="between">
             <Title size={4} text={item.label} />
             <StatChange change={item.change} value={item.percent} />
@@ -61,6 +51,20 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
   );
   }
 
+  const data1 = [
+    {
+      name: "Number of Installations",
+      data: [2, 2, 2, 69658, 97031, 4, 137133, 154175],
+    },
+  ];
+
+  const data2 = [
+    {
+      name: "Number of Installations",
+      data: [322, 43, 57177, 69658, 97031, 4, 137133, 154175],
+    },
+  ];
+
 const LineGraphNav = (props) => {
 
   const [selected, setSelected] = useState(0);
@@ -71,13 +75,25 @@ const LineGraphNav = (props) => {
     return setSelected(index);
   };
 
+  const test = x => {
+    switch(x) {
+      case 1:
+      return graph.setData(data1);
+      case 2:
+      return graph.setData(data2);
+      default:
+      console.log(graph.data)
+    }
+
+  };
 
 
 return (
 <div>
+
   <DyanmicList
   selected={selected}
-  changeDataSetFunction={graph.setData}
+  changeDataSetFunction={test}
   propThatHasFunction={handleActiveItem}
   {...lineGraphNavJSON}
 />

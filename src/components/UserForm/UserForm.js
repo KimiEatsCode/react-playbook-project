@@ -3,18 +3,21 @@ import { GraphContext } from '../MyProvider/MyProvider';
 const Form = () => {
   const graph = useContext(GraphContext);
 
+ 
+
+
   return (
     <div className="user-form">
       {/* Change user's name in context */}
       <div className="input-item">
         <label className="label">Update Name: </label>
-        <input
+        {/* <input
           className="input"
-          onChange={e => graph.setName(e.target.value)}
-        />
+          onChange={e => graph.setData(data2)}
+        /> */}
       </div>
 
-   
+
 
     </div>
   );
