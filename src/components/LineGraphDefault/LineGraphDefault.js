@@ -16,6 +16,11 @@ const data2 = [
   },
 ];
 
+const data = [{
+  name: 'Number of Installations',
+  data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
+}]
+
 const LineGraphDefault = (props) => {
   const graph = useContext(GraphContext);
 
@@ -27,7 +32,7 @@ return (
 
         <Card padding="20%">
           <LineGraph
-            chartData="data2"
+            chartData="data"
             id="line-fixed-height"
             xAxisCategories={[
               "Jan",
