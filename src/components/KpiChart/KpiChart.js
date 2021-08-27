@@ -4,7 +4,7 @@ import LineGraphDefault from '../LineGraphDefault/LineGraphDefault';
 import { Caption, Card,Flex, FlexItem, SectionSeparator, Title } from 'playbook-ui';
 import styled from 'styled-components';
 
-import { UserContext } from '../MyProvider/MyProvider';
+import { GraphContext } from '../MyProvider/MyProvider';
 
 const GraphTitle = styled.p `
 color:#242b42;
@@ -14,11 +14,10 @@ text-align:left;
 `;
 
 const KpiChart = (props) => {
-  const user = useContext(UserContext);
-
+  const graph = useContext(GraphContext);
 return (
   <div>
-{user.name}
+{graph.name}
     <Caption>Dashboard</Caption>
     <Title>Commerce Dashboard</Title>
     <Card padding="none" marginTop="sm" marginBottom="sm">

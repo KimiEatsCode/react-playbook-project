@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../MyProvider/MyProvider';
+import { GraphContext } from '../MyProvider/MyProvider';
 const Form = () => {
-  const user = useContext(UserContext);
+  const graph = useContext(GraphContext);
 
   return (
     <div className="user-form">
@@ -10,18 +10,12 @@ const Form = () => {
         <label className="label">Update Name: </label>
         <input
           className="input"
-          onChange={e => user.setName(e.target.value)}
+          onChange={e => graph.setName(e.target.value)}
         />
       </div>
 
-      {/* Change user's location in context */}
-      <div className="input-item">
-        <label className="label">Update Location: </label>
-        <input
-          className="input"
-          onChange={e => user.setLocation(e.target.value)}
-        />
-      </div>
+   
+
     </div>
   );
 };

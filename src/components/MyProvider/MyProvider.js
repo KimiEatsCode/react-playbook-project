@@ -1,25 +1,32 @@
 import React, { createContext, useState } from "react";
 
-export const UserContext = createContext();
+export const GraphContext = createContext();
 
 // This context provider is passed to any component requiring the context
- const UserProvider = ({ children }) => {
+ const GraphProvider = ({ children }) => {
 
-  const [name, setName] = useState("William");
-  const [location, setLocation] = useState("Mars");
+  const revenueData = [
+    {
+      name: "Number of Installations",
+      data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
+    },
+  ];
+  
+const [name, setName] = useState("cheers");
+  const [data, setData] = useState(revenueData);
 
   return (
-    <UserContext.Provider
+    <GraphContext.Provider
       value={{
         name,
-        location,
+        data,
         setName,
-        setLocation
+        setData,
       }}
     >
       {children}
-    </UserContext.Provider>
+    </GraphContext.Provider>
   );
 };
 
-export default UserProvider;
+export default GraphProvider;

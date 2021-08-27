@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Card,
   Flex,
@@ -7,27 +7,22 @@ import {
   LineGraph,
   SectionSeparator,
 } from "playbook-ui";
+import { GraphContext  } from "../MyProvider/MyProvider";
 
 
 
-const data = [
-  {
-    name: "Number of Installations",
-    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
-  },
-];
+const LineGraphDefault = (props) => {
+  const graph = useContext(GraphContext);
 
-
-const LineGraphDefault = (props) => (
+return (
   <div>
 
     <Flex flex={4}>
       <FlexItem>
 
         <Card padding="20%">
-      
           <LineGraph
-            chartData={data}
+            chartData={graph.data}
             id="line-fixed-height"
             xAxisCategories={[
               "Jan",
@@ -53,5 +48,6 @@ const LineGraphDefault = (props) => (
 
   </div>
 );
+}
 
 export default LineGraphDefault;
