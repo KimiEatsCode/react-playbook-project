@@ -1,7 +1,5 @@
 import React from "react";
 import {
-
-
   Card,
   Flex,
   FlexItem,
@@ -13,9 +11,9 @@ import {
   User,
 } from "playbook-ui";
 
-const BlockNav = (props) => {
+const TicketColumn = (props) => {
   window.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('[class="pb_title_kit_4"]').forEach((element) => {
+    document.querySelectorAll('.pb_nav_list_item_text .pb_title_kit_4').forEach((element) => {
       element.classList.add("truncate");
     });
   });
@@ -45,7 +43,7 @@ const BlockNav = (props) => {
                 <User
                   align="left"
                   avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
-                  name="Missing Part"
+                  name="Missing part"
                   orientation="horizontal"
                   {...props}
                 />
@@ -56,7 +54,7 @@ const BlockNav = (props) => {
                 <User
                   align="left"
                   avatarUrl="https://randomuser.me/api/portraits/women/45.jpg"
-                  name="Part of process incomplete"
+                  name="Not performing"
                   orientation="horizontal"
                   {...props}
                 />
@@ -66,6 +64,7 @@ const BlockNav = (props) => {
                 <User
                   align="left"
                   avatarUrl="https://randomuser.me/api/portraits/men/44.jpg"
+                  name="Unexpected error"
                   orientation="horizontal"
                   {...props}
                 />
@@ -326,4 +325,4 @@ const BlockNav = (props) => {
   );
 };
 
-export default BlockNav;
+export default TicketColumn;

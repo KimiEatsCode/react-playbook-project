@@ -1,6 +1,5 @@
 import React from 'react';
 import LineGraphNav from '../LineGraphNav/LineGraphNav';
-import ListLayoutRight from '../ListLayoutRight/ListLayoutRight';
 import LineGraphDefault from '../LineGraphDefault/LineGraphDefault';
 import { Card,Flex, FlexItem, SectionSeparator } from 'playbook-ui';
 import styled from 'styled-components'
@@ -8,7 +7,7 @@ import styled from 'styled-components'
 const GraphTitle = styled.p `
 color:#242b42;
 font-weight:bold;
-padding:10px 20px;
+padding:20px 20px 5px 20px;
 text-align:left;
 `;
 

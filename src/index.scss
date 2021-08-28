@@ -5,11 +5,15 @@ code {
     monospace;
 }
 
-.truncate  {
+.truncate {
+
   max-width: 60%;
-  white-space: nowrap;
+  white-space: nowrap!important;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis!important;
+
+ 
+
 }
 
 .sideBorder {

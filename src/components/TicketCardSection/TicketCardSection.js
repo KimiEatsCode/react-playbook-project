@@ -1,19 +1,16 @@
 import React from 'react';
-import BlockNav from '../BlockNav/BlockNav';
+import TicketColumn from '../TicketColumn/TicketColumn';
 import { Flex, FlexItem, Layout } from 'playbook-ui'
 
 
 const TicketCardSection = () => (
   <>
 <Flex orientation="row" wrap>
-
-     <BlockNav></BlockNav>
-
+     <TicketColumn></TicketColumn>
   </Flex>
 
   </>
 );
-
 
 
 export default TicketCardSection;
