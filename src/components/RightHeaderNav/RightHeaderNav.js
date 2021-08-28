@@ -4,9 +4,7 @@ import { Badge, Card, Collapsible, Flex, FlexItem, Icon, Nav, NavItem, User } fr
 
 const RightHeaderNav = (props) => {
 const[inHover, setHover] = useState(false);
-const testFunction = (testing) => {
-  console.log('this is ' + testing)
-}
+
 
 return (
   <div>
@@ -39,11 +37,13 @@ return (
           {...props}
       />
 </NavItem>
-
+<NavItem>
  <div onClick={props.testFunction}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >  <User clickHandler={testFunction}
+ onMouseEnter={() => setHover(true)}
+ onMouseLeave={() => setHover(false)}
+      >
+
+      <User
             align="left"
             avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
             name="Anna Black"
@@ -54,10 +54,15 @@ return (
 
         </div>
 
+
+
+        </NavItem>
   </Nav>
 
+
 {inHover &&
-<Card padding="none" className="hoverNav">
+<Card padding="none" className="hoverNav"
+>
   <Nav
 
       padding="none"
@@ -77,7 +82,9 @@ return (
     />
   </Nav>
   </Card>
+
 }
+
   </div>
 );
 }
