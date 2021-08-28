@@ -2,10 +2,6 @@ import React, { useState, useContext } from "react";
 
 import {
   Flex,
-  FlexItem,
-  Icon,
-  List,
-  ListItem,
   Nav,
   NavItem,
   StatChange,
@@ -29,18 +25,18 @@ const lineGraphNavJSON = {
 
 
 const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataSetFunction }) => {
-  const graph = useContext(GraphContext);
+
   return (
     <>
 <Flex>
-
    <Nav orientation="vertical">
    {navData.map((item, index) => (
-     <NavItem key={index} className={selected === index ? "sideBorder" : ""} onMouseEnter={()=> propThatHasFunction(index)}
-
-     onClick={()=> changeDataSetFunction(index)}>
+     <NavItem key={index} className={selected === index ? "sideBorder" : ""} onClick={()=> {
+       propThatHasFunction(index); changeDataSetFunction(index);}
+     }
+      >
       <Flex spacing="between">
-            <Title size={4} text={item.label} />{index}
+            <Title size={4} text={item.label} />
             <StatChange change={item.change} value={item.percent} />
           </Flex>
       </NavItem>
@@ -50,6 +46,13 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
     </>
   );
   }
+
+  const data0 = [
+    {
+      name: "Data 0",
+      data: [3, 52503, 57177, 3, 3, 119931, 137133, 154175],
+    },
+  ];
 
   const data1 = [
     {
@@ -74,7 +77,6 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
   ];
 
 
-
   const data4 = [
     {
       name: "Data 4",
@@ -96,12 +98,13 @@ const LineGraphNav = (props) => {
   const graph = useContext(GraphContext);
 
   const handleActiveItem = index => {
-    console.log(selected)
     return setSelected(index);
   };
 
   const dataSets = index => {
     switch(index) {
+      case 0:
+        return graph.setData(data0);
       case 1:
        return graph.setData(data1);
       case 2:
@@ -113,20 +116,10 @@ const LineGraphNav = (props) => {
       case 5:
         return graph.setData(data5);
       default:
-      console.log("default")
+      console.log("dataSets default data")
     }
   };
 
-  // const test2 = x => {
-  //   switch(x) {
-  //     case 1:
-  //     return graph.setName("Joseph");
-  //     case 2:
-  //     return graph.setName("Charles");
-  //     default:
-  //     console.log(graph.name)
-  //   }
-  // };
 
 return (
 <div>
