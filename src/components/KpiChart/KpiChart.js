@@ -15,7 +15,7 @@ const KpiChart = (props) => (
   <div>
     <Caption>Dashboard</Caption>
     <Title>Commerce Dashboard</Title>
-    <Card padding="none">
+    <Card padding="none" marginTop="sm" marginBottom="md">
      <Card.Body padding="none">
      <GraphTitle>Key Performance Indicators</GraphTitle>
       </Card.Body>

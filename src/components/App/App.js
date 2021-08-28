@@ -14,7 +14,7 @@ function App() {
       <Background backgroundColor="light" padding="xl">
         <KpiChart />
         <LineGraphDefault />
-        <TicketCardSection />
+        <TicketCardSection/>
         <CardDashboard />
       </Background>
     </div>
