@@ -7,7 +7,7 @@ import {
   StatChange,
   Title,
 } from "playbook-ui";
-import { GraphContext } from '../MyProvider/MyProvider';
+import { GraphContext } from '../GraphProvider/GraphProvider';
 
 
 const lineGraphNavJSON = {
@@ -31,12 +31,14 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
 <Flex>
    <Nav orientation="vertical">
    {navData.map((item, index) => (
-    <NavItem key={index} className={selected === index ? "sideBorder" : ""}   //onClick={()=> {
-    //    propThatHasFunction(index); changeDataSetFunction(index);}
-    //  }
+    <NavItem key={index} className={selected === index ? "sideBorder" : ""}
+
     onClick={()=> {
-      propThatHasFunction(index)}
-    }
+       propThatHasFunction(index); changeDataSetFunction(index);}
+     }
+    // onClick={()=> {
+    //   propThatHasFunction(index)}
+    // }
       >
       <Flex spacing="between">
             <Title size={4} text={item.label} />
@@ -126,6 +128,7 @@ const LineGraphNav = (props) => {
 
 return (
 <div>
+<Flex orientation="row">
 
   <DyanmicList
   selected={selected}
@@ -133,6 +136,7 @@ return (
   propThatHasFunction={handleActiveItem}
   {...lineGraphNavJSON}
 />
+</Flex>
 </div>
 
 );

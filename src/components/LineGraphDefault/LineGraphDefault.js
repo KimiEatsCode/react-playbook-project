@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import {
   Card,
-  Flex,
-  FlexItem,
   LineGraph,
 } from "playbook-ui";
-import { GraphContext  } from "../MyProvider/MyProvider";
+import { GraphContext  } from "../GraphProvider/GraphProvider";
 
 
 const LineGraphDefault = (props) => {
@@ -17,13 +15,14 @@ const LineGraphDefault = (props) => {
     },
   ];
 
+  console.log(graph)
+
 return (
 
   <div>
 
-    <Flex flex={4}>
-      <FlexItem>
-        <Card padding="20%">
+
+        <Card padding="sm">
           <LineGraph
             chartData={data0}
             id="line-fixed-height"
@@ -45,8 +44,7 @@ return (
             {...props}
           />
         </Card>
-      </FlexItem>
-    </Flex>
+
 
   </div>
 

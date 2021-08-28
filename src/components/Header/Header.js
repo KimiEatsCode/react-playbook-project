@@ -10,13 +10,18 @@ const Header = (props) => {
 return (
   <>
    <Flex orientation="row" justify="right" spacing="between" align="start">
-     <FlexItem><img className="logoTopNav"alt="PBJ logo"src={logo}></img></FlexItem>
+     <FlexItem><img className="logoTopNav"alt="PBJ logo"src={logo}></img>
+     </FlexItem>
+
      <FlexItem>
      <RightHeaderNav></RightHeaderNav>
      </FlexItem>
      </Flex>
+     <Flex orientation="row">
+      <FlexItem>
      <LeftHeaderNav></LeftHeaderNav>
-
+     </FlexItem>
+    </Flex>
   </>
 );
 }

@@ -1,4 +1,4 @@
-import CardDashboard from "../CardDashboard/CardDashboard";
+import CardDashboard from "../BottomDashboard/CardDashboard";
 import TicketCardSection from "../TicketCardSection/TicketCardSection";
 import LineGraphDefault from "../LineGraphDefault/LineGraphDefault";
 import KpiChart from "../KpiChart/KpiChart";
