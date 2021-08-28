@@ -1,6 +1,6 @@
 import React from 'react';
 import TicketColumn from '../TicketColumn/TicketColumn';
-import { Caption, Flex} from 'playbook-ui'
+import { Caption, Flex, FlexItem} from 'playbook-ui'
 
 
 const TicketCardSection = () => (
@@ -10,7 +10,13 @@ const TicketCardSection = () => (
   <Caption marginBottom="xs">This Weeks Ticket Esculations</Caption></Flex>
 <Flex orientation="row" wrap marginTop="xs">
 
+
      <TicketColumn></TicketColumn>
+     <TicketColumn></TicketColumn>
+     <TicketColumn></TicketColumn>
+     <TicketColumn></TicketColumn>
+     <TicketColumn></TicketColumn>
+
   </Flex>
 
   </>

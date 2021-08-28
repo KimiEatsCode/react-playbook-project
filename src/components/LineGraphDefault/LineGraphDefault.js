@@ -8,15 +8,11 @@ import { GraphContext  } from "../GraphProvider/GraphProvider";
 
 const LineGraphDefault = (props) => {
   const graph = useContext(GraphContext);
-  const data0 = [
-    {
-      name: "Data 0",
-      data: [3, 52503, 57177, 3, 3, 119931, 137133, 154175],
-    },
-  ];
-
-  let x = graph.dataState[0].name;
-
+  const data = [{
+    name: 'Number of Installations',
+    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
+  }]
+ 
 return (
 
   <div>
@@ -24,7 +20,7 @@ return (
         <Card padding="sm">
         {graph.dataState[0].name}
           <LineGraph
-            chartData={data0}
+            chartData={data}
             id="line-fixed-height"
             xAxisCategories={[
               "Jan",

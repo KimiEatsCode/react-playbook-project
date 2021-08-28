@@ -39,7 +39,7 @@ const TicketColumn = (props) => {
           {
             <Nav link="#" orientation="vertical" {...props}>
               <NavItem  iconRight="angle-right" link="#" {...props}>
-                <Flex>
+                {/* <Flex> */}
                 <User
                   align="left"
                   avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
@@ -47,10 +47,10 @@ const TicketColumn = (props) => {
                   orientation="horizontal"
                   {...props}
                 />
-                </Flex>
+                {/* </Flex> */}
               </NavItem>
               <NavItem link="#" iconRight="angle-right">
-                <Flex>
+                {/* <Flex> */}
                 <User
                   align="left"
                   avatarUrl="https://randomuser.me/api/portraits/women/45.jpg"
@@ -58,7 +58,7 @@ const TicketColumn = (props) => {
                   orientation="horizontal"
                   {...props}
                 />
-                </Flex>
+                {/* </Flex> */}
               </NavItem>
               <NavItem link="#">
                 <User
@@ -82,243 +82,6 @@ const TicketColumn = (props) => {
         </Card>
         </FlexItem>
 
-        <FlexItem>
-        <Card padding="none">
-          <Card.Body className="sideBorder">
-            {}
-            <Flex spacing="between">
-              <FlexItem>
-                <Title size={4}>New</Title>
-              </FlexItem>
-              <FlexItem marginLeft="xs">
-                <Pill text="25" variant="info" />
-              </FlexItem>
-            </Flex>
-          </Card.Body>
-          <SectionSeparator variant="card"></SectionSeparator>
-
-          {
-            <Nav link="#" orientation="vertical" {...props}>
-              <NavItem  iconRight="angle-right" link="#" {...props}>
-                <Flex>
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
-                  name="Missing Part"
-                  orientation="horizontal"
-                  {...props}
-                />
-                </Flex>
-              </NavItem>
-              <NavItem link="#" iconRight="angle-right">
-                <Flex>
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/women/45.jpg"
-                  name="Part of process incomplete"
-                  orientation="horizontal"
-                  {...props}
-                />
-                </Flex>
-              </NavItem>
-              <NavItem link="#">
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/men/44.jpg"
-                  orientation="horizontal"
-                  {...props}
-                />
-              </NavItem>
-              <NavItem link="#">
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/men/46.jpg"
-                  orientation="horizontal"
-                  {...props}
-                />
-              </NavItem>
-            </Nav>
-          }
-        </Card>
-        </FlexItem>
-
-        <FlexItem>
-        <Card padding="none">
-          <Card.Body className="sideBorder">
-            {}
-            <Flex spacing="between">
-              <FlexItem>
-                <Title size={4}>New</Title>
-              </FlexItem>
-              <FlexItem marginLeft="xs">
-                <Pill text="25" variant="info" />
-              </FlexItem>
-            </Flex>
-          </Card.Body>
-          <SectionSeparator variant="card"></SectionSeparator>
-
-          {
-            <Nav link="#" orientation="vertical" {...props}>
-              <NavItem  iconRight="angle-right" link="#" {...props}>
-                <Flex>
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
-                  name="Missing Part"
-                  orientation="horizontal"
-                  {...props}
-                />
-                </Flex>
-              </NavItem>
-              <NavItem link="#" iconRight="angle-right">
-                <Flex>
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/women/45.jpg"
-                  name="Part of process incomplete"
-                  orientation="horizontal"
-                  {...props}
-                />
-                </Flex>
-              </NavItem>
-              <NavItem link="#">
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/men/44.jpg"
-                  orientation="horizontal"
-                  {...props}
-                />
-              </NavItem>
-              <NavItem link="#">
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/men/46.jpg"
-                  orientation="horizontal"
-                  {...props}
-                />
-              </NavItem>
-            </Nav>
-          }
-        </Card>
-        </FlexItem>
-        <FlexItem>
-        <Card padding="none">
-          <Card.Body className="sideBorder">
-            {}
-            <Flex spacing="between">
-              <FlexItem>
-                <Title size={4}>New</Title>
-              </FlexItem>
-              <FlexItem marginLeft="xs">
-                <Pill text="25" variant="info" />
-              </FlexItem>
-            </Flex>
-          </Card.Body>
-          <SectionSeparator variant="card"></SectionSeparator>
-
-          {
-            <Nav link="#" orientation="vertical" {...props}>
-              <NavItem  iconRight="angle-right" link="#" {...props}>
-                <Flex>
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
-                  name="Missing Part"
-                  orientation="horizontal"
-                  {...props}
-                />
-                </Flex>
-              </NavItem>
-              <NavItem link="#" iconRight="angle-right">
-                <Flex>
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/women/45.jpg"
-                  name="Part of process incomplete"
-                  orientation="horizontal"
-                  {...props}
-                />
-                </Flex>
-              </NavItem>
-              <NavItem link="#">
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/men/44.jpg"
-                  orientation="horizontal"
-                  {...props}
-                />
-              </NavItem>
-              <NavItem link="#">
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/men/46.jpg"
-                  orientation="horizontal"
-                  {...props}
-                />
-              </NavItem>
-            </Nav>
-          }
-        </Card>
-        </FlexItem>
-        <FlexItem>
-        <Card padding="none">
-          <Card.Body className="sideBorder">
-            {}
-            <Flex spacing="between">
-              <FlexItem>
-                <Title size={4}>New</Title>
-              </FlexItem>
-              <FlexItem marginLeft="xs">
-                <Pill text="25" variant="info" />
-              </FlexItem>
-            </Flex>
-          </Card.Body>
-          <SectionSeparator variant="card"></SectionSeparator>
-
-          {
-            <Nav link="#" orientation="vertical" {...props}>
-              <NavItem  iconRight="angle-right" link="#" {...props}>
-                <Flex>
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
-                  name="Missing Part"
-                  orientation="horizontal"
-                  {...props}
-                />
-                </Flex>
-              </NavItem>
-              <NavItem link="#" iconRight="angle-right">
-                <Flex>
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/women/45.jpg"
-                  name="Part of process incomplete"
-                  orientation="horizontal"
-                  {...props}
-                />
-                </Flex>
-              </NavItem>
-              <NavItem link="#">
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/men/44.jpg"
-                  orientation="horizontal"
-                  {...props}
-                />
-              </NavItem>
-              <NavItem link="#">
-                <User
-                  align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/men/46.jpg"
-                  orientation="horizontal"
-                  {...props}
-                />
-              </NavItem>
-            </Nav>
-          }
-        </Card>
-        </FlexItem>
         </Flex>
 
     </div>
