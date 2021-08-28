@@ -1,7 +1,7 @@
 import React from 'react';
 import LineGraphNav from '../LineGraphNav/LineGraphNav';
 import LineGraphDefault from '../LineGraphDefault/LineGraphDefault';
-import { Card,Flex, FlexItem, SectionSeparator } from 'playbook-ui';
+import { Caption, Card,Flex, FlexItem, SectionSeparator, Title } from 'playbook-ui';
 import styled from 'styled-components'
 
 const GraphTitle = styled.p `
@@ -13,6 +13,8 @@ text-align:left;
 
 const KpiChart = (props) => (
   <div>
+    <Caption>Dashboard</Caption>
+    <Title>Commerce Dashboard</Title>
     <Card padding="none">
      <Card.Body padding="none">
      <GraphTitle>Key Performance Indicators</GraphTitle>

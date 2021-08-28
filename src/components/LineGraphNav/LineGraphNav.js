@@ -31,9 +31,12 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
 <Flex>
    <Nav orientation="vertical">
    {navData.map((item, index) => (
-     <NavItem key={index} className={selected === index ? "sideBorder" : ""} onClick={()=> {
-       propThatHasFunction(index); changeDataSetFunction(index);}
-     }
+    <NavItem key={index} className={selected === index ? "sideBorder" : ""}   //onClick={()=> {
+    //    propThatHasFunction(index); changeDataSetFunction(index);}
+    //  }
+    onClick={()=> {
+      propThatHasFunction(index)}
+    }
       >
       <Flex spacing="between">
             <Title size={4} text={item.label} />
