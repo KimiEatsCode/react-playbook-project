@@ -7,15 +7,15 @@ import 'playbook-ui/dist/fonts/fontawesome-min';
  import 'playbook-ui/dist/fonts/regular-min';
  import 'playbook-ui/dist/playbook.css';
  import 'bootstrap/dist/css/bootstrap.min.css';
+ import GraphProvider from "../src/components/GraphProvider/GraphProvider"
 
 ReactDOM.render(
   <React.StrictMode>
+       <GraphProvider>
     <App />
+    </GraphProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

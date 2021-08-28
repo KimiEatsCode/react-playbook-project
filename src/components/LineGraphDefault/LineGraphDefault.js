@@ -15,14 +15,14 @@ const LineGraphDefault = (props) => {
     },
   ];
 
-  console.log(graph)
+  let x = graph.dataState[0].name;
 
 return (
 
   <div>
 
-
         <Card padding="sm">
+        {graph.dataState[0].name}
           <LineGraph
             chartData={data0}
             id="line-fixed-height"

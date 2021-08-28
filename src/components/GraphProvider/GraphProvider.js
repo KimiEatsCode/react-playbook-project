@@ -13,7 +13,7 @@ export const GraphContext = createContext();
 
 
   const [dataState, setData] = useState(data0);
-
+  
   return (
     <GraphContext.Provider
       value={{

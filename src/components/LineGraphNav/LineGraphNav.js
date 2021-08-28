@@ -129,7 +129,7 @@ const LineGraphNav = (props) => {
 return (
 <div>
 <Flex orientation="row">
-
+ 
   <DyanmicList
   selected={selected}
   changeDataSetFunction={dataSets}

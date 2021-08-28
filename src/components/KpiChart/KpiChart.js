@@ -4,6 +4,7 @@ import LineGraphDefault from '../LineGraphDefault/LineGraphDefault';
 import { Caption, Card, CircleIconButton, Flex, FlexItem, SectionSeparator, Title } from 'playbook-ui';
 import styled from 'styled-components'
 
+
 const GraphTitle = styled.p `
 color:#242b42;
 font-weight:bold;
@@ -11,8 +12,11 @@ padding:20px 20px 5px 20px;
 text-align:left;
 `;
 
-const KpiChart = (props) => (
+const KpiChart = (props) => {
+
+  return (
   <div>
+
     <Caption>Dashboard</Caption>
     <Title>Commerce Dashboard</Title>
     <Card align="stretch" padding="none" marginTop="sm" marginBottom="md">
@@ -46,8 +50,10 @@ const KpiChart = (props) => (
 
     </Flex>
     </Card>
+
   </div>
 );
+  }
 
 
 export default KpiChart;
