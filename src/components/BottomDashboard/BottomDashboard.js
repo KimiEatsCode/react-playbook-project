@@ -75,7 +75,7 @@ function valueCommaSeparated(val) {
   console.log(val)
  val = val.toString();
   let part1 = val.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-  
+
 return part1;
 }
 
@@ -132,13 +132,26 @@ const GridRowFill = ({ data }) => (
 
 const IconGrid = ({ gridData, props }) => (
   <div>
+
     <Card borderNone marginTop="lg" padding="none" shadow="deeper">
+    <Flex orientation="row">
       <Card borderRadius="none">
-      <GridRowFill data={gridData.slice(0, 2)} />
+      <GridRowFill data={gridData.slice(0, 1)} />
+      </Card>
+      <Card borderRadius="none" >
+      <GridRowFill data={gridData.slice(1, 2)} />
+      </Card>
+      </Flex>
+
+      <Flex orientation="row" align="stretch">
+      <Card borderRadius="none">
+      <GridRowFill data={gridData.slice(2, 3)} />
       </Card>
       <Card borderRadius="none">
-      <GridRowFill data={gridData.slice(2)} />
+      <GridRowFill data={gridData.slice(-1)} />
+
       </Card>
+      </Flex>
     </Card>
   </div>
 );
