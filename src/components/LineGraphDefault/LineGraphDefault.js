@@ -12,13 +12,13 @@ const LineGraphDefault = (props) => {
     name: 'Number of Installations',
     data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
   }]
- 
+
 return (
 
   <div>
 
-        <Card padding="sm">
-        {graph.dataState[0].name}
+       
+        {/* {graph.dataState[0].name} */}
           <LineGraph
             chartData={data}
             id="line-fixed-height"
@@ -39,7 +39,7 @@ return (
             yAxisMin={0}
             {...props}
           />
-        </Card>
+
 
 
   </div>

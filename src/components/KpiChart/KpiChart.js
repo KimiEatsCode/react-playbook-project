@@ -20,7 +20,6 @@ const KpiChart = (props) => {
     <Caption>Dashboard</Caption>
     <Title>Commerce Dashboard</Title>
     <Card align="stretch" padding="none" marginTop="sm" marginBottom="md">
-
      <Card.Body padding="none">
        <Flex orientation="row" spacing="between">
      <GraphTitle>Key Performance Indicators</GraphTitle>
@@ -30,24 +29,35 @@ const KpiChart = (props) => {
                   icon="ellipsis-h"
                   variant="secondary"
               />
-              </Flex>
+        </Flex>
       </Card.Body>
       <SectionSeparator variant="card"></SectionSeparator>
-      <Flex orientation="row" align="stretch">
 
-      <Flex grow
-      orientation="column"
-       >
-      <FlexItem><LineGraphNav padding="none"></LineGraphNav></FlexItem>
+      <Flex orientation="row" justify="stretch">
+      <Flex
+      orientation="column">
+      <FlexItem></FlexItem>
       </Flex>
 
-      <Flex grow
-      orientation="column"
-       >
+
+      <Flex orientation="column" justify="stretch">
+      <FlexItem grow>
+
+
+      </FlexItem>
+      </Flex>
+
+    </Flex>
+
+    <Flex orientation="row"  >
       <FlexItem>
-      <LineGraphDefault/></FlexItem>
-      </Flex>
-
+    <LineGraphNav  padding="none"></LineGraphNav>
+    </FlexItem>
+    <FlexItem>
+    <Card padding="sm" borderRadius="none">
+    <LineGraphDefault/>
+    </Card>
+    </FlexItem>
     </Flex>
     </Card>
 

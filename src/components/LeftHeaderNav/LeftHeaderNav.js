@@ -6,6 +6,7 @@ const LeftHeaderNav = (props) => {
   return (
 
     <Nav
+   
         link="#"
         orientation="horizontal"
         {...props}
@@ -32,7 +33,7 @@ const LeftHeaderNav = (props) => {
           {...props}
       />
     </Nav>
-  
+
   )
 }
 

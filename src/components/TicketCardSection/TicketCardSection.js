@@ -6,20 +6,20 @@ import { Caption, Flex } from 'playbook-ui'
 const TicketCardSection = () => (
 
 
-<div class="container-fluid">
+<div class="container-fluid p-0">
 
-  {/* <Flex orientation="row" justify="center">
-  <Caption marginBottom="xs">This Weeks Ticket Esculations</Caption></Flex>
-<Flex orientation="row" wrap marginTop="xs"> */}
+  <Flex orientation="row" justify="center">
+  <Caption>This Weeks Ticket Esculations</Caption>
+  </Flex>
 
-<div className="row">
-     <TicketColumn></TicketColumn>
-     <TicketColumn></TicketColumn>
-     <TicketColumn></TicketColumn>
-     <TicketColumn></TicketColumn>
-     <TicketColumn></TicketColumn>
+<div class="row">
+     <TicketColumn pillColor="info"></TicketColumn>
+     <TicketColumn pillColor="primary"></TicketColumn>
+     <TicketColumn pillColor="warning"></TicketColumn>
+     <TicketColumn pillColor="error"></TicketColumn>
+     <TicketColumn pillColor="success"></TicketColumn>
      </div>
-  {/* </Flex> */}
+
   </div>
 
 );

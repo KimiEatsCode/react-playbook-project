@@ -7,7 +7,6 @@ import {
   Flex,
   FlexItem,
   IconStatValue,
-  Layout,
   ProgressSimple,
   SectionSeparator,
   Title,
@@ -70,7 +69,17 @@ const ticketData = {
 //
 ////////////////////////////////////////////////////
 
-const FulfillmentChart = ({ chartData, title, props }) => (
+const FulfillmentChart = ({ chartData, title, props }) => {
+
+function valueCommaSeparated(val) {
+  console.log(val)
+ val = val.toString();
+  let part1 = val.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  
+return part1;
+}
+
+return (
   <Card borderNone marginTop="lg" padding="none" shadow="deeper">
     <Flex spacing="between" vertical="center">
       <Title padding="sm" size="4" text={title} />
@@ -78,7 +87,9 @@ const FulfillmentChart = ({ chartData, title, props }) => (
     </Flex>
     <SectionSeparator />
 
+
     {chartData.map((row, i) => (
+
       <Flex key={i} padding="sm" spacing="between" vertical="center">
         <FlexItem fixedSize="100px">
           <Caption size="xs" text={row.label} />
@@ -93,13 +104,15 @@ const FulfillmentChart = ({ chartData, title, props }) => (
         </FlexItem>
         <FlexItem>
           <Flex vertical="right">
-            <Body text={`${row.value}`} />
+            {/* <Body   text={`${row.value}`} /> */}
+            <Body text={valueCommaSeparated(row.value)}/>
           </Flex>
         </FlexItem>
       </Flex>
     ))}
   </Card>
-);
+ );
+}
 
 const GridRowFill = ({ data }) => (
   <Card.Body padding="none">
@@ -120,8 +133,12 @@ const GridRowFill = ({ data }) => (
 const IconGrid = ({ gridData, props }) => (
   <div>
     <Card borderNone marginTop="lg" padding="none" shadow="deeper">
+      <Card borderRadius="none">
       <GridRowFill data={gridData.slice(0, 2)} />
+      </Card>
+      <Card borderRadius="none">
       <GridRowFill data={gridData.slice(2)} />
+      </Card>
     </Card>
   </div>
 );

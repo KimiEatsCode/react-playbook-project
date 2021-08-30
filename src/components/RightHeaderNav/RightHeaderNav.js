@@ -38,9 +38,9 @@ return (
       />
 </NavItem>
 <NavItem>
- <div onClick={props.testFunction}
+ <div
  onMouseEnter={() => setHover(true)}
- onMouseLeave={() => setHover(false)}
+ onMouseLeave={() => setHover(true)}
       >
 
       <User
@@ -62,6 +62,7 @@ return (
 
 {inHover &&
 <Card padding="none" className="hoverNav"
+onMouseLeave={() => setHover(false)}
 >
   <Nav
 

@@ -1,19 +1,22 @@
-
+$text_lt_default :#242b42!important;
+$text_lt_light :#687887!important;
+$text_lt_lighter :#c1cdd6!important;
+$test: green;
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.truncate {
 
-  max-width: 60%;
+.truncate {
+  color: $text_lt_default!important;
+  width: 80%;
+  margin:0px;
+  padding:0px;
   white-space: nowrap!important;
   overflow: hidden;
   text-overflow: ellipsis!important;
-
-
-
 }
 
 .sideBorder {
@@ -34,5 +37,15 @@ code {
   z-index: 1;
   position: absolute!important;
   width: 24%;
+  right:10px;
+  &:hover {
+    display:block;
+    color:red;
+  }
 }
 
+
+
+:export {
+  test: $test
+}

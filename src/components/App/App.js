@@ -1,10 +1,10 @@
-import CardDashboard from "../BottomDashboard/CardDashboard";
+import BottomDashboard from "../BottomDashboard/BottomDashboard";
 import TicketCardSection from "../TicketCardSection/TicketCardSection";
 import LineGraphDefault from "../LineGraphDefault/LineGraphDefault";
 import KpiChart from "../KpiChart/KpiChart";
 import { Background } from "playbook-ui";
 import   Header from "../Header/Header"
- 
+
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
 
         <LineGraphDefault />
         <TicketCardSection/>
-        <CardDashboard />
+        <BottomDashboard />
       </Background>
     </div>
   );

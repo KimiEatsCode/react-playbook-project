@@ -10,8 +10,15 @@ import {
   Title,
   User,
 } from "playbook-ui";
+import variables from "../../index.scss";
+
+
+const CSS = {
+  BackgroundColor: variables.test
+}
 
 const TicketColumn = (props) => {
+
   window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.pb_nav_list_item_text .pb_title_kit_4').forEach((element) => {
       element.classList.add("truncate");
@@ -19,28 +26,27 @@ const TicketColumn = (props) => {
   });
 
   return (
-    <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-{/* <Flex orientation="row" spacing="between"> */}
+    <div className="col-xs-12 mb-xs-2 col-sm mt-sm-3 col-md col-lg-4 mt-lg-3 col-xl-3">
 
-
-        <Card padding="none">
+        <Card padding="none" marginRight="sm">
           <Card.Body className="sideBorder">
-            {}
-            {/* <Flex spacing="between">
-              <FlexItem> */}
+
+            <Flex spacing="between">
+              <FlexItem>
                 <Title size={4}>New</Title>
-              {/* </FlexItem>
-              <FlexItem marginLeft="xs"> */}
-                <Pill text="25" variant="info" />
-              {/* </FlexItem>
-            </Flex> */}
+              </FlexItem>
+              <FlexItem marginLeft="xs">
+                <Pill text="25" variant={props.pillColor} />
+              </FlexItem>
+            </Flex>
           </Card.Body>
           <SectionSeparator variant="card"></SectionSeparator>
 
           {
             <Nav link="#" orientation="vertical" {...props}>
-              <NavItem  iconRight="angle-right" link="#" {...props}>
-                {/* <Flex> */}
+
+              <NavItem
+               iconRight="angle-right" link="#" {...props}>
                 <User
                   align="left"
                   avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
@@ -48,10 +54,11 @@ const TicketColumn = (props) => {
                   orientation="horizontal"
                   {...props}
                 />
-                {/* </Flex> */}
               </NavItem>
-              <NavItem link="#" iconRight="angle-right">
-                {/* <Flex> */}
+
+              <NavItem link="#"
+              iconRight="angle-right">
+
                 <User
                   align="left"
                   avatarUrl="https://randomuser.me/api/portraits/women/45.jpg"
@@ -59,31 +66,36 @@ const TicketColumn = (props) => {
                   orientation="horizontal"
                   {...props}
                 />
-                {/* </Flex> */}
+
               </NavItem>
-              <NavItem link="#">
+              <NavItem link="#"
+              iconRight="angle-right" >
+                   <Flex >
                 <User
                   align="left"
-                  avatarUrl="https://randomuser.me/api/portraits/men/44.jpg"
+                  avatar
                   name="Unexpected error"
                   orientation="horizontal"
                   {...props}
                 />
+                </Flex>
               </NavItem>
-              <NavItem link="#">
+              <NavItem link="#"
+              iconRight="angle-right" >
+                <Flex justify="stretch">
                 <User
                   align="left"
                   avatarUrl="https://randomuser.me/api/portraits/men/46.jpg"
                   orientation="horizontal"
+                  name="Not performing"
                   {...props}
                 />
+                </Flex>
               </NavItem>
             </Nav>
           }
         </Card>
 
-
-        {/* </Flex> */}
 
     </div>
   );
