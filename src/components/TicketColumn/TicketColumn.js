@@ -19,20 +19,21 @@ const TicketColumn = (props) => {
   });
 
   return (
-    <div>
-<Flex orientation="row" spacing="between">
-  <FlexItem>
+    <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+{/* <Flex orientation="row" spacing="between"> */}
+
+
         <Card padding="none">
           <Card.Body className="sideBorder">
             {}
-            <Flex spacing="between">
-              <FlexItem>
+            {/* <Flex spacing="between">
+              <FlexItem> */}
                 <Title size={4}>New</Title>
-              </FlexItem>
-              <FlexItem marginLeft="xs">
+              {/* </FlexItem>
+              <FlexItem marginLeft="xs"> */}
                 <Pill text="25" variant="info" />
-              </FlexItem>
-            </Flex>
+              {/* </FlexItem>
+            </Flex> */}
           </Card.Body>
           <SectionSeparator variant="card"></SectionSeparator>
 
@@ -80,9 +81,9 @@ const TicketColumn = (props) => {
             </Nav>
           }
         </Card>
-        </FlexItem>
 
-        </Flex>
+
+        {/* </Flex> */}
 
     </div>
   );
