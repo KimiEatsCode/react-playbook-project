@@ -24,11 +24,11 @@ return (
   <Flex orientation="row" justify="center">
 
   <Caption >This Weeks Ticket Esculations</Caption>
-   {JSON.parse(this.state.ticketnew)}
+   {JSON.stringify(this.state.ticketnew)}
   </Flex>
 
 <div className="row">
-     <TicketColumn newTicketData = {this.state.ticketnew} pillColor="info"></TicketColumn>
+     <TicketColumn pillColor="info"></TicketColumn>
      <TicketColumn pillColor="primary"></TicketColumn>
      <TicketColumn pillColor="warning"></TicketColumn>
      <TicketColumn pillColor="error"></TicketColumn>
