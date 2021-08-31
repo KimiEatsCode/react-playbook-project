@@ -1,7 +1,4 @@
 {
-  "ticketNewData": [
-    {
-      "title": "New",
       "users": [
         {
             "id":"1",
@@ -34,6 +31,6 @@
             "name": "Need technical"
           }
       ]
-    }
-  ]
+
 }
+
