@@ -44,11 +44,11 @@ return (
   </Flex>
 
 <div className="row">
-<TicketColumn dataTickets = ""></TicketColumn>
-     <TicketColumn pillColor = "" ></TicketColumn>
-     <TicketColumn pillColor = "" ></TicketColumn>
-     <TicketColumn pillColor = "" ></TicketColumn>
-     <TicketColumn pillColor = "" ></TicketColumn>
+<TicketColumn pillColor="info"></TicketColumn>
+     <TicketColumn pillColor="primary"></TicketColumn>
+     <TicketColumn pillColor="warning"></TicketColumn>
+     <TicketColumn pillColor="error"></TicketColumn>
+     <TicketColumn pillColor="success"></TicketColumn>
 
      {/* <TicketColumn dataTickets = {mergedData[0]} ></TicketColumn>
      <TicketColumn dataTickets = {mergedData[1]} ></TicketColumn>
