@@ -29,7 +29,7 @@ import {
     // const data = dataTickets;
 
     return (
-      <div className="col-xs-12 mb-xs-2 col-sm mt-sm-3 col-md col-lg-4 mt-lg-3 col-xl-3">
+      <div className="col-xs-12  mb-xs-2 col-sm mt-sm-3 col-md col-lg-3 mt-lg-3 col-xl-3">
 
           <Card padding="none" marginRight="sm">
             <Card.Body className="sideBorder">
