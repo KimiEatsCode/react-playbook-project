@@ -44,12 +44,17 @@ return (
   </Flex>
 
 <div className="row">
-  
-     <TicketColumn dataTickets = {mergedData[0]} ></TicketColumn>
+<TicketColumn dataTickets = ""></TicketColumn>
+     <TicketColumn pillColor = "" ></TicketColumn>
+     <TicketColumn pillColor = "" ></TicketColumn>
+     <TicketColumn pillColor = "" ></TicketColumn>
+     <TicketColumn pillColor = "" ></TicketColumn>
+
+     {/* <TicketColumn dataTickets = {mergedData[0]} ></TicketColumn>
      <TicketColumn dataTickets = {mergedData[1]} ></TicketColumn>
      <TicketColumn dataTickets = {mergedData[2]} ></TicketColumn>
      <TicketColumn dataTickets = {mergedData[3]} ></TicketColumn>
-     <TicketColumn dataTickets = {mergedData[4]} ></TicketColumn>
+     <TicketColumn dataTickets = {mergedData[4]} ></TicketColumn> */}
      </div>
 
   </div>

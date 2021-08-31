@@ -1,5 +1,5 @@
 
-import { response, rest } from "msw";
+import { rest } from "msw";
 import ticketNewData from "./ticketNew.json";
 import ticketFeedbackData from "./ticketFeedback.json"
 import ticketProcessingData from "./ticketProcessing.json"
@@ -7,7 +7,7 @@ import ticketAwaitingData from "./ticketAwaiting.json"
 import ticketApprovedData from "./ticketApproved.json"
 
 export const handlers = [
-    rest.get('*/ticketnew', (req, res, ctx) =>
+    rest.get('*/ticketNew', (req, res, ctx) =>
       res(
         ctx.status(200),
         ctx.json([
