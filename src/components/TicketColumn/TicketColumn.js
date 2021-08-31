@@ -16,7 +16,7 @@ const CSS = {
   BackgroundColor: variables.test,
 };
 
-const TicketColumn = (dataNewTickets) => {
+const TicketColumn = (dataTickets) => {
   window.addEventListener("DOMContentLoaded", () => {
     document
       .querySelectorAll(".pb_nav_list_item_text .pb_title_kit_4")
@@ -25,16 +25,17 @@ const TicketColumn = (dataNewTickets) => {
       });
   });
 
-    const data = dataNewTickets.dataNewTickets[0].users;
+    const data = dataTickets;
+
   return (
     <div className="col-xs-12 mb-xs-2 col-sm mt-sm-3 col-md col-lg-4 mt-lg-3 col-xl-3">
-      {/* {JSON.stringify(dataNewTickets.dataNewTickets[0].users)} */}
 
       <Card padding="none" marginRight="sm">
+
         <Card.Body className="sideBorder">
           <Flex spacing="between">
             <FlexItem>
-              <Title size={4}>New</Title>
+              <Title size={4}>{}</Title>
             </FlexItem>
             <FlexItem marginLeft="xs">
               <Pill text="25" variant="primary" />
@@ -42,11 +43,12 @@ const TicketColumn = (dataNewTickets) => {
           </Flex>
         </Card.Body>
         <SectionSeparator variant="card"></SectionSeparator>
-
+{JSON.stringify(data)}
         {
           <Nav link="#" orientation="vertical">
-            {data.map((item, index) => (
-              <NavItem iconRight="angle-right" link="#">
+            {Object.entries(data).map((item, index) => (
+              <NavItem key={index}
+              iconRight="angle-right" link="#">
                 <User
                   avatar
                   align="left"

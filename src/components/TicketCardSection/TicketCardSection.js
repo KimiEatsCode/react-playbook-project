@@ -6,16 +6,32 @@ import { Caption, Flex } from 'playbook-ui'
  export default class TicketCardSection extends Component {
   state = {
     hasErrors: false,
-    ticketnewData: {}
+    mergedData: {},
+    ticketNewData: {},
+    ticketFeedbackData: {}
   };
-  componentDidMount(){
-    fetch("http://localhost:3000/ticketnew")
-      .then(res => res.json())
-      .then(res => this.setState({ ticketnewData: res }))
-      .catch(() => this.setState({ hasErrors: true }));
-  }
+
+  componentDidMount() {
+    Promise.all([
+      fetch("http://localhost:3000/ticketNew")
+      .then(ticketNewData => ticketNewData.json()),
+      fetch("http://localhost:3000/ticketFeedback")
+      .then(ticketFeedbackData => ticketFeedbackData.json()),
+      fetch("http://localhost:3000/ticketProcessing")
+      .then(ticketProcessingData => ticketProcessingData.json()),
+      fetch("http://localhost:3000/ticketAwaiting")
+      .then(ticketAwaitingData => ticketAwaitingData.json()),
+      fetch("http://localhost:3000/ticketApproved")
+      .then(ticketApprovedData => ticketApprovedData.json())
+    ]).then(([ticketNewData, ticketFeedbackData, ticketProcessingData, ticketAwaitingData, ticketApprovedData]) => {
+        this.setState({
+            mergedData: [ticketNewData, ticketFeedbackData, ticketProcessingData, ticketAwaitingData, ticketApprovedData]
+        });
+    }).catch(() => this.setState({ hasErrors: true }));
+}
 
 render () {
+const mergedData = this.state.mergedData;
 
 return (
 
@@ -28,8 +44,12 @@ return (
   </Flex>
 
 <div className="row">
-     <TicketColumn dataNewTickets = {this.state.ticketnewData} ></TicketColumn>
-
+  
+     <TicketColumn dataTickets = {mergedData[0]} ></TicketColumn>
+     <TicketColumn dataTickets = {mergedData[1]} ></TicketColumn>
+     <TicketColumn dataTickets = {mergedData[2]} ></TicketColumn>
+     <TicketColumn dataTickets = {mergedData[3]} ></TicketColumn>
+     <TicketColumn dataTickets = {mergedData[4]} ></TicketColumn>
      </div>
 
   </div>
