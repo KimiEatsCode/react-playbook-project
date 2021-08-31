@@ -8,16 +8,16 @@ import   Header from "../Header/Header";
 function App() {
 
 
- async function getServerSideProps() {
-  const response = await fetch("http://localhost:3000/ticketnew");
-  const users = await response.json();
+  // async function getServerSideProps() {
+  //   const response = await fetch("http://localhost:3000/ticketnew");
+  //   const users = await response.json();
 
-  return {
-    props: {
-      users,
-    },
-  };
-}
+  //   return {
+  //     props: {
+  //       users,
+  //     },
+  //   };
+  // }
 
   return (
     <div className="App">
@@ -27,7 +27,8 @@ function App() {
         <KpiChart />
 
         <LineGraphDefault />
-        <TicketCardSection ticketNewFunc={getServerSideProps}/>
+        {/* <TicketCardSection ticketNewFunc={getServerSideProps}/> */}
+        <TicketCardSection/>
         <BottomDashboard />
       </Background>
 

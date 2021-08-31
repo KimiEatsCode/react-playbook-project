@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import TicketColumn from '../TicketColumn/TicketColumn';
 import { Caption, Flex } from 'playbook-ui'
 
 
-const TicketCardSection = (props) => {
+ export default class TicketCardSection extends Component {
+  state = {
+    hasErrors: false,
+    ticketnew: {}
+  };
+  componentDidMount(){
+    fetch("http://localhost:3000/ticketnew")
+      .then(res => res.json())
+      .then(res => this.setState({ ticketnew: res }))
+      .catch(() => this.setState({ hasErrors: true }));
+  }
 
+render () {
 
 return (
-
 
 <div className="container-fluid p-0">
 
   <Flex orientation="row" justify="center">
-  {props.ticketNewFunc}
-  <Caption>This Weeks Ticket Esculations</Caption>
+
+  <Caption >This Weeks Ticket Esculations</Caption>
+   {JSON.stringify(this.state.ticketnew)}
   </Flex>
 
 <div className="row">
@@ -26,7 +37,7 @@ return (
 
   </div>
 
-);
+)
 }
+ }
 
-export default TicketCardSection;
