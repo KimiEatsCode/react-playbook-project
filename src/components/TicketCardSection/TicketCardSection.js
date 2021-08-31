@@ -31,7 +31,7 @@ import { Caption, Flex } from 'playbook-ui'
 }
 
 render () {
-const mergedData = this.state.mergedData;
+// const mergedData = this.state.mergedData;
 
 return (
 
@@ -44,11 +44,11 @@ return (
   </Flex>
 
 <div className="row">
-<TicketColumn pillColor="info"></TicketColumn>
-     <TicketColumn pillColor="primary"></TicketColumn>
-     <TicketColumn pillColor="warning"></TicketColumn>
-     <TicketColumn pillColor="error"></TicketColumn>
-     <TicketColumn pillColor="success"></TicketColumn>
+     <TicketColumn title="New" count="25" pillColor="info"></TicketColumn>
+     <TicketColumn title="Manager Feedback" count="5"  pillColor="primary"></TicketColumn>
+     <TicketColumn title="Processing"  count="3"  pillColor="warning"></TicketColumn>
+     <TicketColumn title="Awaiting Feedback"  count="2"  pillColor="error"></TicketColumn>
+     <TicketColumn title="Approved"  count="15"  pillColor="success"></TicketColumn>
 
      {/* <TicketColumn dataTickets = {mergedData[0]} ></TicketColumn>
      <TicketColumn dataTickets = {mergedData[1]} ></TicketColumn>

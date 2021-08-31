@@ -10,17 +10,17 @@ import {
   Title,
   User,
 } from "playbook-ui";
-import variables from "../../index.scss";
+// import variables from "../../index.scss";
 
-const CSS = {
-  BackgroundColor: variables.test,
-};
+// const CSS = {
+//   BackgroundColor: variables.test,
+// };
 
 // const TicketColumn = (dataTickets) => {
   const TicketColumn = (props) => {
   window.addEventListener("DOMContentLoaded", () => {
     document
-      .querySelectorAll(".pb_nav_list_item_text .pb_title_kit_4")
+      .querySelectorAll("h3.pb_title_kit_4")
       .forEach((element) => {
         element.classList.add("truncate");
       });
@@ -36,17 +36,18 @@ const CSS = {
 
               <Flex spacing="between">
                 <FlexItem>
-                  <Title size={4}>New</Title>
+                  <Title size={4}>{props.title}</Title>
                 </FlexItem>
                 <FlexItem marginLeft="xs">
-                  <Pill text="25" variant={props.pillColor} />
+                  <Pill text={props.count} variant={props.pillColor} />
                 </FlexItem>
               </Flex>
             </Card.Body>
             <SectionSeparator variant="card"></SectionSeparator>
 
             {
-              <Nav link="#" orientation="vertical" {...props}>
+              <div className="ticketCards" >
+              <Nav orientation="vertical"  >
 
                 <NavItem
                  iconRight="angle-right" link="#" {...props}>
@@ -55,7 +56,7 @@ const CSS = {
                     avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
                     name="Missing part"
                     orientation="horizontal"
-                    {...props}
+
                   />
                 </NavItem>
 
@@ -67,7 +68,7 @@ const CSS = {
                     avatarUrl="https://randomuser.me/api/portraits/women/45.jpg"
                     name="Not performing"
                     orientation="horizontal"
-                    {...props}
+
                   />
 
                 </NavItem>
@@ -79,7 +80,7 @@ const CSS = {
                     avatar
                     name="Unexpected error"
                     orientation="horizontal"
-                    {...props}
+
                   />
                   </Flex>
                 </NavItem>
@@ -91,11 +92,12 @@ const CSS = {
                     avatarUrl="https://randomuser.me/api/portraits/men/46.jpg"
                     orientation="horizontal"
                     name="Not performing"
-                    {...props}
+
                   />
                   </Flex>
                 </NavItem>
               </Nav>
+              </div>
             }
           </Card>
 

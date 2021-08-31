@@ -9,7 +9,6 @@
     "bootstrap": "^5.1.0",
     "flow": "^0.2.3",
     "generate-react-cli": "^7.0.4",
-    "node-sass": "^6.0.1",
     "playbook-ui": "^10.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.5",
@@ -44,6 +43,8 @@
   },
   "devDependencies": {
     "msw": "^0.35.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.8.0"
   },
