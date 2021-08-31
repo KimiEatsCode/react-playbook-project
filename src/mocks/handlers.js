@@ -1,5 +1,5 @@
 
-import { response, rest } from "msw";
+import { rest } from "msw";
 import ticketNewData from "./ticketnew.json"
 
 export const handlers = [

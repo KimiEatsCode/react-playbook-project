@@ -36,9 +36,7 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
     onClick={()=> {
        propThatHasFunction(index); changeDataSetFunction(index);}
      }
-    // onClick={()=> {
-    //   propThatHasFunction(index)}
-    // }
+
       >
       <Flex spacing="between">
             <Title size={4} text={item.label} />
@@ -129,7 +127,7 @@ const LineGraphNav = (props) => {
 return (
 <div>
 <Flex orientation="row">
- 
+
   <DyanmicList
   selected={selected}
   changeDataSetFunction={dataSets}
