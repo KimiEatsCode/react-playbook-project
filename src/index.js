@@ -9,6 +9,21 @@ import 'playbook-ui/dist/fonts/fontawesome-min';
  import 'bootstrap/dist/css/bootstrap.min.css';
  import GraphProvider from "../src/components/GraphProvider/GraphProvider"
 
+
+ async function main() {
+  if (process.env.NODE_ENV === 'development') {
+    if (window.location.pathname === '/public/') {
+      window.location.pathname = '/public/'
+      return
+    }
+    const { worker } = require('./mocks/browser')
+    await worker.start({
+      serviceWorker: {
+        url: '/mockServiceWorker.js',
+      },
+    })
+  }
+
 ReactDOM.render(
   <React.StrictMode>
        <GraphProvider>
@@ -18,4 +33,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+ }
+
 reportWebVitals();
+main()

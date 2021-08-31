@@ -49,5 +49,8 @@
   },
   "optionalDependencies": {
     "babel-loader": "8.1.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

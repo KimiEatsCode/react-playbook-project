@@ -3,16 +3,20 @@ import TicketColumn from '../TicketColumn/TicketColumn';
 import { Caption, Flex } from 'playbook-ui'
 
 
-const TicketCardSection = () => (
+const TicketCardSection = (props) => {
 
 
-<div class="container-fluid p-0">
+return (
+
+
+<div className="container-fluid p-0">
 
   <Flex orientation="row" justify="center">
+  {props.ticketNewFunc}
   <Caption>This Weeks Ticket Esculations</Caption>
   </Flex>
 
-<div class="row">
+<div className="row">
      <TicketColumn pillColor="info"></TicketColumn>
      <TicketColumn pillColor="primary"></TicketColumn>
      <TicketColumn pillColor="warning"></TicketColumn>
@@ -23,6 +27,6 @@ const TicketCardSection = () => (
   </div>
 
 );
-
+}
 
 export default TicketCardSection;

@@ -1,0 +1,39 @@
+{
+  "ticketNewData": [
+    {
+      "title": "New",
+      "users": [
+        {
+            "id":"1",
+          "avatarUrl": "https://randomuser.me/api/portraits/thumb/men/75.jpg",
+          "name": "Missing part"
+        },
+        {
+            "id":"2",
+            "avatarUrl": "https://randomuser.me/api/portraits/thumb/men/75.jpg",
+            "name": "Not performing"
+          },
+          {
+            "id":"3",
+            "avatarUrl": "",
+            "name": "Missing part"
+          },
+          {
+            "id":"4",
+            "avatarUrl": "https://randomuser.me/api/portraits/thumb/men/75.jpg",
+            "name": "Missing part"
+          },
+          {
+            "id":"5",
+            "avatarUrl": "",
+            "name": "Unexpected error"
+          },
+          {
+            "id":"6",
+            "avatarUrl": "",
+            "name": "Need technical"
+          }
+      ]
+    }
+  ]
+}

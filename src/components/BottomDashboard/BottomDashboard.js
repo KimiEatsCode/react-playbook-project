@@ -72,7 +72,6 @@ const ticketData = {
 const FulfillmentChart = ({ chartData, title, props }) => {
 
 function valueCommaSeparated(val) {
-  console.log(val)
  val = val.toString();
   let part1 = val.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
