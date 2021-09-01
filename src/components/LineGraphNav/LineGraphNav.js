@@ -86,7 +86,7 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
   const data4 = [
     {
       name: "Data 4",
-      data: [322, 43, 57177, 69658, 97031, 4, 137133, 154175],
+      data: [100, 43, 57177, 69658, 97031, 4, 137133, 154175],
     },
   ];
 
@@ -107,9 +107,8 @@ const LineGraphNav = (props) => {
   };
 
   const dataSets = index => {
-    console.log(index);
-
-    return index ? graph.setData(data2) : null;
+    
+    return index ? graph.setData(graph.dataObject) : null;
   }
 
 

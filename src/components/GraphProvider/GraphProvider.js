@@ -4,15 +4,35 @@ export const GraphContext = createContext();
 
  const GraphProvider = ({ children }) => {
 
-  const data0 = [
-    {
-      name: "Data 0",
-      data: [3, 52503, 57177, 3, 3, 119931, 137133, 154175],
-    },
-  ];
+  const dataObject = {
+    data0 :
+      {
+        name: "Data 0",
+        data: [3, 52503, 57177, 3, 3, 119931, 137133, 154175],
+      },
 
+    data1 :
+      {
+        name: "Data 0",
+        data: [3, 52503, 57177, 3, 3, 119931, 137133, 154175],
+      },
 
-  const [data, setData] = useState(data0);
+  }
+  // const data0 = [
+  //   {
+  //     name: "Data 0",
+  //     data: [3, 52503, 57177, 3, 3, 119931, 137133, 154175],
+  //   },
+  // ];
+
+  // const data23 = [
+  //   {
+  //     name: "Data 0",
+  //     data: [3, 52503, 57177, 3, 3, 119931, 137133, 154175],
+  //   },
+  // ];
+
+  const [data, setData] = useState(dataObject);
 
   return (
     <GraphContext.Provider
