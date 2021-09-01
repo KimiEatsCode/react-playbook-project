@@ -11,6 +11,8 @@ import { Caption, Flex } from 'playbook-ui'
     ticketFeedbackData: {}
   };
 
+  //refactor use useEffect in a functional component
+
   componentDidMount() {
     Promise.all([
       fetch("http://localhost:3000/ticketNew")
@@ -25,13 +27,13 @@ import { Caption, Flex } from 'playbook-ui'
       .then(ticketApprovedData => ticketApprovedData.json())
     ]).then(([ticketNewData, ticketFeedbackData, ticketProcessingData, ticketAwaitingData, ticketApprovedData]) => {
         this.setState({
-            mergedData: [ticketNewData, ticketFeedbackData, ticketProcessingData, ticketAwaitingData, ticketApprovedData]
+            mergedData:[ticketNewData, ticketFeedbackData, ticketProcessingData, ticketAwaitingData, ticketApprovedData]
         });
     }).catch(() => this.setState({ hasErrors: true }));
 }
 
 render () {
-// const mergedData = this.state.mergedData;
+ const mergedData = this.state.mergedData;
 
 return (
 
@@ -44,17 +46,17 @@ return (
   </Flex>
 
 <div className="row">
-     <TicketColumn title="New" count="25" pillColor="info"></TicketColumn>
+     {/* <TicketColumn title="New" count="25" pillColor="info"></TicketColumn>
      <TicketColumn title="Manager Feedback" count="5"  pillColor="primary"></TicketColumn>
      <TicketColumn title="Processing"  count="3"  pillColor="warning"></TicketColumn>
      <TicketColumn title="Awaiting Feedback"  count="2"  pillColor="error"></TicketColumn>
-     <TicketColumn title="Approved"  count="15"  pillColor="success"></TicketColumn>
+     <TicketColumn title="Approved"  count="15"  pillColor="success"></TicketColumn> */}
 
-     {/* <TicketColumn dataTickets = {mergedData[0]} ></TicketColumn>
+     <TicketColumn dataTickets = {mergedData[0]} ></TicketColumn>
      <TicketColumn dataTickets = {mergedData[1]} ></TicketColumn>
      <TicketColumn dataTickets = {mergedData[2]} ></TicketColumn>
      <TicketColumn dataTickets = {mergedData[3]} ></TicketColumn>
-     <TicketColumn dataTickets = {mergedData[4]} ></TicketColumn> */}
+     <TicketColumn dataTickets = {mergedData[4]} ></TicketColumn>
      </div>
 
   </div>

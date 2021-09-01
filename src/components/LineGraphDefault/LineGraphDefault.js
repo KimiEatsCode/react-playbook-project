@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import {
-  Card,
   LineGraph,
 } from "playbook-ui";
 import { GraphContext  } from "../GraphProvider/GraphProvider";
@@ -8,19 +7,20 @@ import { GraphContext  } from "../GraphProvider/GraphProvider";
 
 const LineGraphDefault = (props) => {
   const graph = useContext(GraphContext);
-  const data = [{
-    name: 'Number of Installations',
-    data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
-  }]
+
+  // const data = [{
+  //   name: 'Number of Installations',
+  //   data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
+  // }]
 
 return (
 
   <div>
 
-       
-        {/* {graph.dataState[0].name} */}
+
+        {JSON.stringify(graph.data[0].data)}
           <LineGraph
-            chartData={data}
+            chartData={graph.data[0].data}
             id="line-fixed-height"
             xAxisCategories={[
               "Jan",
