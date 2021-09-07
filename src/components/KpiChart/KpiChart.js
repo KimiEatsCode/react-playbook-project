@@ -55,7 +55,7 @@ const KpiChart = (props) => {
     </FlexItem>
     <FlexItem>
     <Card padding="sm" borderRadius="none">
-    <LineGraphDefault style={{borderColor:"red!important"}}/>
+    <LineGraphDefault/>
     </Card>
     </FlexItem>
     </Flex>
