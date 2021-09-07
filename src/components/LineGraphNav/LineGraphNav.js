@@ -104,7 +104,6 @@ const LineGraphNav = (props) => {
   };
 
   const dataSets = index => {
-
     return index ? graph.setData(graph.dataObject) : null;
   }
 

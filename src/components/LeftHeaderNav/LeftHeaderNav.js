@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { Flex, FlexItem, Nav, NavItem } from 'playbook-ui'
+import { Nav, NavItem } from 'playbook-ui'
 
 const LeftHeaderNav = (props) => {
   return (
 
     <Nav
-   
+
         link="#"
         orientation="horizontal"
         {...props}
