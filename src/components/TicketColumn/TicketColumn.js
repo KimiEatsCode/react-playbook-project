@@ -10,14 +10,8 @@ import {
   Title,
   User,
 } from "playbook-ui";
-// import variables from "../../index.scss";
 
-// const CSS = {
-//   BackgroundColor: variables.test,
-// };
-
- const TicketColumn = (dataTickets, ...props) => {
-  // const TicketColumn = (props) => {
+ const TicketColumn = (props) => {
   window.addEventListener("DOMContentLoaded", () => {
     document
       .querySelectorAll("h3.pb_title_kit_4")
@@ -26,14 +20,10 @@ import {
       });
   });
 
-    const data = dataTickets;
-
     return (
       <div className="col-xs-12  mb-xs-2 col-sm mt-sm-3 col-md col-lg-3 mt-lg-3 col-xl-3">
-{/* {JSON.stringify(dataTickets)} */}
           <Card padding="none" marginRight="sm">
             <Card.Body className="sideBorder">
-
               <Flex spacing="between">
                 <FlexItem>
                   <Title size={4}>{props.title}</Title>
@@ -44,23 +34,21 @@ import {
               </Flex>
             </Card.Body>
             <SectionSeparator variant="card"></SectionSeparator>
-
             {
               <div className="ticketCards" >
               <Nav orientation="vertical"  >
 
                 <NavItem
-                 iconRight="angle-right" link="#" {...props}>
+                 iconRight="angle-right"  {...props}>
                   <User
                     align="left"
                     avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
                     name="Missing part"
                     orientation="horizontal"
-
                   />
                 </NavItem>
 
-                <NavItem link="#"
+                <NavItem
                 iconRight="angle-right">
 
                   <User

@@ -8,15 +8,11 @@ import { GraphContext  } from "../GraphProvider/GraphProvider";
 const LineGraphDefault = (props) => {
   const graph = useContext(GraphContext);
 
-  // const data33 = [{
-  //   name: 'Number of Installations',
-  //   data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
-  // }]
 
 return (
 
   <div>
-        {JSON.stringify(graph.data)}
+        {/* {JSON.stringify(graph.data)} */}
           <LineGraph
             chartData={graph.data}
             id="line-fixed-height"

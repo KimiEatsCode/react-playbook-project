@@ -12,24 +12,16 @@ const RightHeaderNav = (props) => {
         highlight={false}
         variant="subtle"
       >
-        <NavItem>
-          <Icon fixedWidth icon="bell" {...props} />
 
-          <Badge text="4" variant="primary" {...props} />
-        </NavItem>
-        <NavItem>
-          <Icon fixedWidth icon="inbox" {...props} />
-          <Badge text="2" variant="primary" {...props} />
-        </NavItem>
         <NavItem>
           <div
             onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
           >
             <User
               align="left"
               avatarUrl="https://randomuser.me/api/portraits/women/44.jpg"
-              name="Anna Black"
+              name="Anna McCarthy"
               orientation="horizontal"
               size="sm"
               {...props}

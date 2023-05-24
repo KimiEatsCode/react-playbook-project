@@ -12,7 +12,7 @@ const Header = (props) => {
     <>
       <Flex orientation="row" justify="right" spacing="between" align="start">
         <FlexItem>
-          <img className="logoTopNav" alt="PBJ logo" src={logo}></img>
+          <img className="logoTopNav p-2" alt="PBJ logo" src={logo}></img>
         </FlexItem>
 
         <FlexItem>

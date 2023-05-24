@@ -18,7 +18,10 @@ const KpiChart = (props) => {
   <div>
 
     <Caption>Dashboard</Caption>
-    <Title>Commerce Dashboard</Title>
+    <Title  
+          size={3}
+          tag="h1"
+          text="Commerce Dashboard"></Title>
     <Card align="stretch" padding="none" marginTop="sm" marginBottom="md">
      <Card.Body padding="none">
        <Flex orientation="row" spacing="between">

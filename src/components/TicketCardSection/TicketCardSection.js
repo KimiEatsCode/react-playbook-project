@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TicketColumn from '../TicketColumn/TicketColumn';
-import { Caption, Flex } from 'playbook-ui'
+import { Caption, Flex, Title } from 'playbook-ui'
 
 
  export default class TicketCardSection extends Component {
@@ -10,8 +10,6 @@ import { Caption, Flex } from 'playbook-ui'
     ticketNewData: {},
     ticketFeedbackData: {}
   };
-
-  //refactor use useEffect in a functional component
 
   componentDidMount() {
     Promise.all([
@@ -33,32 +31,25 @@ import { Caption, Flex } from 'playbook-ui'
 }
 
 render () {
- const mergedData = this.state.mergedData;
 
 return (
 
-<div className="container-fluid p-0">
+<div className="container-fluid p-0 mt-5">
+<hr></hr>
+  <div className="row">
+  <Caption >This Week's Ticket Stats</Caption>
+    <Title
+          size={3}
+          tag="h1"
+          text="Team Members"></Title>
 
-  <Flex orientation="row" justify="center">
-
-  <Caption >This Weeks Ticket Esculations</Caption>
-
-  </Flex>
-
+</div>
 <div className="row">
-     {/* <TicketColumn title="New" count="25" pillColor="info"></TicketColumn>
-     <TicketColumn title="Manager Feedback" count="5"  pillColor="primary"></TicketColumn>
+     <TicketColumn title="New" count="25" pillColor="info"></TicketColumn>
      <TicketColumn title="Processing"  count="3"  pillColor="warning"></TicketColumn>
      <TicketColumn title="Awaiting Feedback"  count="2"  pillColor="error"></TicketColumn>
-     <TicketColumn title="Approved"  count="15"  pillColor="success"></TicketColumn> */}
-
-     <TicketColumn dataTickets = {mergedData[0]} ></TicketColumn>
-     <TicketColumn dataTickets = {mergedData[1]} ></TicketColumn>
-     <TicketColumn dataTickets = {mergedData[2]} ></TicketColumn>
-     <TicketColumn dataTickets = {mergedData[3]} ></TicketColumn>
-     <TicketColumn dataTickets = {mergedData[4]} ></TicketColumn>
+     <TicketColumn title="Approved"  count="15"  pillColor="success"></TicketColumn>
      </div>
-
   </div>
 
 )

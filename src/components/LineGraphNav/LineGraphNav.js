@@ -23,7 +23,6 @@ const lineGraphNavJSON = {
 };
 
 
-
 const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataSetFunction }) => {
 
   return (
@@ -50,50 +49,6 @@ const DyanmicList = ({ navData, selected, data, propThatHasFunction, changeDataS
   }
 
 
-  const data0 = [
-    {
-      name: "Data 0",
-      data: [3, 52503, 57177, 3, 3, 119931, 137133, 154175],
-    },
-  ];
-
-  const data1 = [
-    {
-      name: "Data 1",
-      data: [2, 2, 2, 69658, 97031, 4, 137133, 154175],
-    },
-  ];
-
-  const data2 = [
-    {
-      name: "Data 2",
-      data: [2, 2, 2, 69658, 97031, 4, 137133, 154175],
-    },
-  ];
-
-
-  const data3 = [
-    {
-      name: "Data 3",
-      data: [2, 2, 2, 69658, 97031, 4, 137133, 154175],
-    },
-  ];
-
-
-  const data4 = [
-    {
-      name: "Data 4",
-      data: [100, 43, 57177, 69658, 97031, 4, 137133, 154175],
-    },
-  ];
-
-  const data5 = [
-    {
-      name: "Data 5",
-      data: [2, 2, 2, 69658, 97031, 4, 137133, 154175],
-    },
-  ];
-
 const LineGraphNav = (props) => {
 
   const [selected, setSelected] = useState(0);
@@ -104,35 +59,15 @@ const LineGraphNav = (props) => {
   };
 
   const dataSets = index => {
-    return index ? graph.setData(graph.dataObject) : null;
+    console.log(graph.data + 'the graph dataobject')
+    return index ? graph.setData(graph.dataObject[index]) : null;
   }
-
-
-  // const dataSets = index => {
-
-    // switch(index) {
-    //   case 0:
-    //     return graph.setData(data0);
-    //   case 1:
-    //    return graph.setData(data1);
-    //   case 2:
-    //     return graph.setData(data2);
-    //   case 3:
-    //     return graph.setData(data3);
-    //   case 4:
-    //     return graph.setData(data4);
-    //   case 5:
-    //     return graph.setData(data5);
-    //   default:
-    //   console.log("dataSets default data")
-    // }
-  // };
 
 
 return (
 <div>
 <Flex orientation="row">
-
+{/* {JSON.stringify(graph.data)} */}
   <DyanmicList
   selected={selected}
   changeDataSetFunction={dataSets}

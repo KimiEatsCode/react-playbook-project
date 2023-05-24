@@ -6,7 +6,6 @@ const LeftHeaderNav = (props) => {
   return (
 
     <Nav
-
         link="#"
         orientation="horizontal"
         {...props}
@@ -19,7 +18,7 @@ const LeftHeaderNav = (props) => {
       <NavItem
           active
           link="#"
-          text="Case Studies"
+          text="Stats"
           {...props}
       />
       <NavItem

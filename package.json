@@ -9,11 +9,12 @@
     "bootstrap": "^5.1.0",
     "flow": "^0.2.3",
     "generate-react-cli": "^7.0.4",
-    "playbook-ui": "^10.0.1",
+    "playbook-ui": "^12.23.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.5",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.62.1",
     "styled-components": "^5.3.0",
     "web-vitals": "^1.1.2"
   },
@@ -42,11 +43,7 @@
     ]
   },
   "devDependencies": {
-    "msw": "^0.35.0",
-    "node-sass": "^6.0.1",
-    "sass-loader": "^12.1.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^4.8.0"
+    "msw": "^0.35.0"
   },
   "optionalDependencies": {
     "babel-loader": "8.1.0"

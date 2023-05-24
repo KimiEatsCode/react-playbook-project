@@ -12,12 +12,6 @@ import {
   Title,
 } from "playbook-ui";
 
-////////////////////////////////////////////////////
-//
-// Props for the components
-//
-////////////////////////////////////////////////////
-
 const pipelineData = {
   title: "Pipeline Chart",
   chartData: [
@@ -63,55 +57,47 @@ const ticketData = {
   ],
 };
 
-////////////////////////////////////////////////////
-//
-// Components
-//
-////////////////////////////////////////////////////
-
 const FulfillmentChart = ({ chartData, title, props }) => {
+  function valueCommaSeparated(val) {
+    val = val.toString();
+    let part1 = val.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
-function valueCommaSeparated(val) {
- val = val.toString();
-  let part1 = val.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    return part1;
+  }
 
-return part1;
-}
+  return (
+    <div>
+      <Card borderNone marginTop="lg" padding="none" shadow="deeper">
+        <Flex spacing="between" vertical="center">
+          <Title padding="sm" size="4" text={title} />
+          <CircleIconButton icon="ellipsis-h" variant="link" />
+        </Flex>
+        <SectionSeparator />
 
-return (
-  <Card borderNone marginTop="lg" padding="none" shadow="deeper">
-    <Flex spacing="between" vertical="center">
-      <Title padding="sm" size="4" text={title} />
-      <CircleIconButton icon="ellipsis-h" variant="link" />
-    </Flex>
-    <SectionSeparator />
-
-
-    {chartData.map((row, i) => (
-
-      <Flex key={i} padding="sm" spacing="between" vertical="center">
-        <FlexItem fixedSize="100px">
-          <Caption size="xs" text={row.label} />
-        </FlexItem>
-        <FlexItem grow>
-          <Flex spacing="around" vertical="center">
-            <ProgressSimple percent={row.percent} width="100px" />
-            <FlexItem fixedSize="50px">
-              <Caption marginX="xs" size="xs" text={`${row.percent}%`} />
+        {chartData.map((row, i) => (
+          <Flex key={i} padding="sm" spacing="between" vertical="center">
+            <FlexItem fixedSize="100px">
+              <Caption size="xs" text={row.label} />
+            </FlexItem>
+            <FlexItem grow>
+              <Flex spacing="around" vertical="center">
+                <ProgressSimple percent={row.percent} width="100px" />
+                <FlexItem fixedSize="50px">
+                  <Caption marginX="xs" size="xs" text={`${row.percent}%`} />
+                </FlexItem>
+              </Flex>
+            </FlexItem>
+            <FlexItem>
+              <Flex vertical="right">
+                <Body text={valueCommaSeparated(row.value)} />
+              </Flex>
             </FlexItem>
           </Flex>
-        </FlexItem>
-        <FlexItem>
-          <Flex vertical="right">
-            {/* <Body   text={`${row.value}`} /> */}
-            <Body text={valueCommaSeparated(row.value)}/>
-          </Flex>
-        </FlexItem>
-      </Flex>
-    ))}
-  </Card>
- );
-}
+        ))}
+      </Card>
+    </div>
+  );
+};
 
 const GridRowFill = ({ data }) => (
   <Card.Body padding="none">
@@ -131,43 +117,38 @@ const GridRowFill = ({ data }) => (
 
 const IconGrid = ({ gridData, props }) => (
   <div>
-
     <Card borderNone marginTop="lg" padding="none" shadow="deeper">
-    <Flex orientation="row">
-      <Card borderRadius="none">
-      <GridRowFill data={gridData.slice(0, 1)} />
-      </Card>
-      <Card borderRadius="none" >
-      <GridRowFill data={gridData.slice(1, 2)} />
-      </Card>
+      <Flex orientation="row">
+        <Card borderRadius="none">
+          <GridRowFill data={gridData.slice(0, 1)} />
+        </Card>
+        <Card borderRadius="none">
+          <GridRowFill data={gridData.slice(1, 2)} />
+        </Card>
       </Flex>
 
       <Flex orientation="row" align="stretch">
-      <Card borderRadius="none">
-      <GridRowFill data={gridData.slice(2, 3)} />
-      </Card>
-      <Card borderRadius="none">
-      <GridRowFill data={gridData.slice(-1)} />
-
-      </Card>
+        <Card borderRadius="none">
+          <GridRowFill data={gridData.slice(2, 3)} />
+        </Card>
+        <Card borderRadius="none">
+          <GridRowFill data={gridData.slice(-1)} />
+        </Card>
       </Flex>
     </Card>
   </div>
 );
 
-////////////////////////////////////////////////////
-//
-// Layout
-//
-////////////////////////////////////////////////////
-
-// remove flex from here and use the stylesheet
 const CardDashboard = () => {
   return (
     <>
       <div>
-
-        <Flex orientation="row" wrap spacing="between" >
+        <hr></hr>
+        <div className="row mt-5">
+          <Caption>This week's sales stats</Caption>
+          <Title size={3} tag="h1" text="Sales Details"></Title>
+        </div>
+        <Flex orientation="row" wrap spacing="between">
           <FlexItem fixedSize="45%">
             <FulfillmentChart {...pipelineData} />
           </FlexItem>
@@ -175,7 +156,6 @@ const CardDashboard = () => {
             <IconGrid {...ticketData} />
           </FlexItem>
         </Flex>
-
       </div>
     </>
   );
