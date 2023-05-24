@@ -4,7 +4,9 @@
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install` to create node_modules folder with packaged needed to run the application
+
+### `npm start` to launch application in browser and run the code
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
